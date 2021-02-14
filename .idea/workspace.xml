@@ -10,68 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="084bdb5a-f7cb-416b-aa27-a2b2854f5e17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mamashipper.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/authConfig.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/domain/Customer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/domain/CustomerAddress.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/domain/CustomerAuthSecret.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/domain/CustomerEmail.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/domain/CustomerPassword.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/dto/CustomerProfile.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/dto/ICustomerClaims.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/mapper/CustomerAddressMapper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/mapper/CustomerAuthSecret.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/mapper/CustomerMapper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/repository/IAuthRepo.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/repository/ICustomerRepo.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/repository/imples/MongooseAuthRepo.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/repository/imples/MongooseCustomerRepo.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/repository/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/service/authService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/service/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/response.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/usecase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/response.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/usecase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/response.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/usecase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/core/AssertContext.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/core/BaseError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/core/BaseResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/core/IContext.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/core/NotEnoughInformationProvidedError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/core/UnathorizedAccessError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infra/db/mongoose/connection.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infra/db/mongoose/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infra/db/mongoose/models/Customer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infra/db/mongoose/models/CustomerAuthSecret.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/packages/auth/JWTAuth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/packages/auth/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/packages/auth/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/customer/domain/password.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/customer/repos/customerRepo.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/customer/usecase/createCustomer.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/customer/usecase/getCustomerProfile.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xdoubt.md" afterDir="false" />
+    <list default="true" id="084bdb5a-f7cb-416b-aa27-a2b2854f5e17" name="Default Changelist" comment="DDD &amp; CustomerModel">
+      <change afterPath="$PROJECT_DIR$/src/shared/core/Result.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdoubt.md" beforeDir="false" afterPath="$PROJECT_DIR$/xdoubt.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,8 +140,16 @@
       <workItem from="1613049926758" duration="37118000" />
       <workItem from="1613154804872" duration="692000" />
       <workItem from="1613184569480" duration="12045000" />
-      <workItem from="1613200599009" duration="11349000" />
+      <workItem from="1613200599009" duration="16386000" />
     </task>
+    <task id="LOCAL-00001" summary="DDD &amp; CustomerModel">
+      <created>1613224247546</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613224247546</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +175,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="DDD &amp; CustomerModel" />
+    <option name="LAST_COMMIT_MESSAGE" value="DDD &amp; CustomerModel" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="610" y="348" width="689" height="408" key="#Notifications" timestamp="1613050052320">
       <screen x="0" y="28" width="1920" height="1052" />
@@ -246,22 +200,22 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="690" y="255" width="530" height="594" key="FileChooserDialogImpl/0.28.1920.1052@0.28.1920.1052" timestamp="1613155190334" />
-    <state width="1892" height="460" key="GridCell.Tab.0.bottom" timestamp="1613224115567">
+    <state width="1892" height="460" key="GridCell.Tab.0.bottom" timestamp="1613272788602">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="460" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1613224115567" />
-    <state width="1892" height="460" key="GridCell.Tab.0.center" timestamp="1613224115566">
+    <state width="1892" height="460" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1613272788602" />
+    <state width="1892" height="460" key="GridCell.Tab.0.center" timestamp="1613272788602">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="460" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1613224115566" />
-    <state width="1892" height="460" key="GridCell.Tab.0.left" timestamp="1613224115566">
+    <state width="1892" height="460" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1613272788602" />
+    <state width="1892" height="460" key="GridCell.Tab.0.left" timestamp="1613272788601">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="460" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1613224115566" />
-    <state width="1892" height="460" key="GridCell.Tab.0.right" timestamp="1613224115567">
+    <state width="1892" height="460" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1613272788601" />
+    <state width="1892" height="460" key="GridCell.Tab.0.right" timestamp="1613272788602">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="460" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1613224115567" />
+    <state width="1892" height="460" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1613272788602" />
     <state width="1892" height="316" key="GridCell.Tab.1.bottom" timestamp="1613126926655">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -314,6 +268,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="214" y="119" width="1536" height="905" key="SettingsEditor/0.28.1920.1052@0.28.1920.1052" timestamp="1613155402063" />
+    <state x="455" y="211" width="1000" height="682" key="Vcs.Push.Dialog.v2" timestamp="1613224258442">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="455" y="211" width="1000" height="682" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1613224258442" />
     <state x="701" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613224164084">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
