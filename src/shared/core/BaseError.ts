@@ -1,11 +1,9 @@
-export abstract class BaseError extends Error {
+export class BaseError {
     public httpCode: number;
-    public field: string;
+    public error: Object;
 
-    constructor(message: string, field: string, httpCode: number) {
-        super(message);
-        Error.captureStackTrace(this, BaseError);
+    constructor(error : Object, httpCode: number) {
         this.httpCode = httpCode ?? 500;
-        this.field = field;
+        this.error = error;
     }
 }

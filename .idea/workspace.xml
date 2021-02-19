@@ -7,13 +7,101 @@
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="084bdb5a-f7cb-416b-aa27-a2b2854f5e17" name="Default Changelist" comment="DDD &amp; CustomerModel">
-      <change afterPath="$PROJECT_DIR$/src/shared/core/Result.ts" afterDir="false" />
+    <list default="true" id="084bdb5a-f7cb-416b-aa27-a2b2854f5e17" name="Default Changelist" comment="Result class added for better error handling">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/domain/User.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/infra/http/middlewares/authMiddleware.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/infra/http/middlewares/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/infra/http/router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/mapper/UserMapper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/repositories/IUserRepository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/repositories/imples/MongooseUserRepository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/repositories/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/service/IEmailService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/service/imples/NodeMailerEmailService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/service/imples/SendGridEmailService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/service/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/CreateUser/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/CreateUser/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/CreateUser/usecase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/usecase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/LoginUser/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/LoginUser/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/LoginUser/usecase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/SendEmailVerification/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/SendEmailVerification/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/SendEmailVerification/usecase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/VerifyUserEmail/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/VerifyUserEmail/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/VerifyUserEmail/usecase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/core/AppError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/core/FormatError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/core/RejectOrReturn.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/core/Utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infra/http/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infra/http/router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/infra/http/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/packages/Password/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/packages/jwt/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/api/user.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/shared/JWT.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/shared/Password.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/shared/checkForTS.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/user/repository/userRepository.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/user/service/emailService.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/user/service/emailServiceTest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/user/usecase/createUser.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xdoubt.md" beforeDir="false" afterPath="$PROJECT_DIR$/xdoubt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/domain/Customer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/domain/CustomerAddress.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/domain/CustomerAuthSecret.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/domain/CustomerEmail.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/domain/CustomerPassword.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/dto/CustomerProfile.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/dto/ICustomerClaims.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/mapper/CustomerAddressMapper.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/mapper/CustomerAuthSecret.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/mapper/CustomerMapper.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/repository/IAuthRepo.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/repository/ICustomerRepo.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/repository/imples/MongooseAuthRepo.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/repository/imples/MongooseCustomerRepo.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/repository/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/service/authService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/service/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/emailConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/response.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/usecase.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/forum/domain/Comment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/forum/domain/Thread.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/domain/UserContext.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/response.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/usecase.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/infra/database/mongoose/models/UserModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/infra/http/middlewares/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/response.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/usecase.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/core/BaseError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/core/BaseError.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/core/NotEnoughInformationProvidedError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/core/NotEnoughInformationProvidedError.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/core/UnathorizedAccessError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/core/UnathorizedAccessError.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/customer/domain/password.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/customer/domain/password.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/customer/usecase/getCustomerProfile.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/customer/usecase/getCustomerProfile.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +126,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
@@ -49,71 +139,669 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/user/infra/http/middlewares" />
+      <recent name="$PROJECT_DIR$/src/modules/user/domain" />
+      <recent name="$PROJECT_DIR$/src/modules/user/domain/user" />
+      <recent name="$PROJECT_DIR$/src/modules/customer/domain" />
       <recent name="$PROJECT_DIR$/src/modules/inventory" />
-      <recent name="$PROJECT_DIR$/test/customer/usecase" />
-      <recent name="$PROJECT_DIR$/src/shared/packages/auth" />
-      <recent name="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.GetCustomerProfileUseCase">
-    <configuration name="CreateCustomerUseCase" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/test/customer/usecase/createCustomer.spec.ts" />
-      <test-names>
-        <test-name value="CreateCustomerUseCase" />
-      </test-names>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzcxODc3NSwiZXhwIjoxNjEzNzE4OTU1fQ.1C1ETG59ve8WRPQmn8hV1WBRHED8YMZoQGuS7DWuTVo" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3MTg3NzUsImV4cCI6MTYxNDMyMzU3NX0.sj_PgeY8-oTrDkyMbQgcVuraXgTjmsJuC_cu6Sbo_74" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000/v1/user" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzcxNzI1MywiZXhwIjoxNjEzNzE3NDMzfQ.qRySQddOeVet7-lP7wjl_boTuBSAr5XriBSxN7EE-JY" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3MTcyNTMsImV4cCI6MTYxNDMyMjA1M30.WSIx8ISYR1r_QfpoU4a86xRikintLU2bHfqf9TLbyiQ" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot; : &quot;kaizen.tech404@gmail.com&quot; ,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzcxNzI1MywiZXhwIjoxNjEzNzE3NDMzfQ.qRySQddOeVet7-lP7wjl_boTuBSAr5XriBSxN7EE-JY" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3MTcyNTMsImV4cCI6MTYxNDMyMjA1M30.WSIx8ISYR1r_QfpoU4a86xRikintLU2bHfqf9TLbyiQ" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000/v1/user" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJ1c2VyTmFtZSI6ImthaTQzIiwiaWF0IjoxNjEzNzE2OTQwLCJleHAiOjE2MTM3MTcxMjB9.gYgJ_IzCzVyR1rYZHPjvEqKvfoyKHODNtt-x7ZIuHQw" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJpYXQiOjE2MTM3MTY5NDAsImV4cCI6MTYxNDMyMTc0MH0.R-VrDvk-DW8PGJDI1Alx1flRtBv9c97oiorxE_iAvkw" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot; : &quot;kaizen.tech404@gmail.com&quot; ,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJ1c2VyTmFtZSI6ImthaTQzIiwiaWF0IjoxNjEzNzE2OTQwLCJleHAiOjE2MTM3MTcxMjB9.gYgJ_IzCzVyR1rYZHPjvEqKvfoyKHODNtt-x7ZIuHQw" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJpYXQiOjE2MTM3MTY5NDAsImV4cCI6MTYxNDMyMTc0MH0.R-VrDvk-DW8PGJDI1Alx1flRtBv9c97oiorxE_iAvkw" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/verify-email" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;verificationToken&quot; : &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3MTcxMzQsImV4cCI6MTYxMzcxNzQ5NH0.RPV9v4ZQvqo0rMQ6NI9EcsrvQE50J2JDUViT7XHXRtQ&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJ1c2VyTmFtZSI6ImthaTQzIiwiaWF0IjoxNjEzNzE2OTQwLCJleHAiOjE2MTM3MTcxMjB9.gYgJ_IzCzVyR1rYZHPjvEqKvfoyKHODNtt-x7ZIuHQw" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJpYXQiOjE2MTM3MTY5NDAsImV4cCI6MTYxNDMyMTc0MH0.R-VrDvk-DW8PGJDI1Alx1flRtBv9c97oiorxE_iAvkw" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;userName&quot; : &quot;kaizen404&quot; ,&#10;  &quot;email&quot; : &quot;kaizen.tech404@gmail.com&quot; ,&#10;  &quot;fullName&quot; : &quot;Vikas Sandhu&quot;,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJ1c2VyTmFtZSI6ImthaTQzIiwiaWF0IjoxNjEzNjcyODEyLCJleHAiOjE2MTM2NzI5OTJ9.g7lkRHSrxn73n6J6947-xdfbfVOyaGcH9HBlqly4xGc" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJpYXQiOjE2MTM2NzI4MTIsImV4cCI6MTYxNDI3NzYxMn0.6frVwJqvTRYMW_nj6I_Z6Fky6yMol71Nuno7oh5bcUw" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot; : &quot;vikassand9@gmail.com&quot; ,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJ1c2VyTmFtZSI6ImthaTQzIiwiaWF0IjoxNjEzNjcyODEyLCJleHAiOjE2MTM2NzI5OTJ9.g7lkRHSrxn73n6J6947-xdfbfVOyaGcH9HBlqly4xGc" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJpYXQiOjE2MTM2NzI4MTIsImV4cCI6MTYxNDI3NzYxMn0.6frVwJqvTRYMW_nj6I_Z6Fky6yMol71Nuno7oh5bcUw" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;userName&quot; : &quot;kai43&quot; ,&#10;  &quot;email&quot; : &quot;vikassand98768768@gmail.com&quot; ,&#10;  &quot;fullName&quot; : &quot;Vikas Sandhu&quot;,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJ1c2VyTmFtZSI6ImthaTQzIiwiaWF0IjoxNjEzNjcyODEyLCJleHAiOjE2MTM2NzI5OTJ9.g7lkRHSrxn73n6J6947-xdfbfVOyaGcH9HBlqly4xGc" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJpYXQiOjE2MTM2NzI4MTIsImV4cCI6MTYxNDI3NzYxMn0.6frVwJqvTRYMW_nj6I_Z6Fky6yMol71Nuno7oh5bcUw" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;userName&quot; : &quot;kai43&quot; ,&#10;  &quot;email&quot; : &quot;vikassand9@gmail.com&quot; ,&#10;  &quot;fullName&quot; : &quot;Vikas Sandhu&quot;,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJ1c2VyTmFtZSI6ImthaTQzIiwiaWF0IjoxNjEzNjcyODEyLCJleHAiOjE2MTM2NzI5OTJ9.g7lkRHSrxn73n6J6947-xdfbfVOyaGcH9HBlqly4xGc" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMjAxYzA0NC01NWY1LTRhOGEtOTJkOS01OTNmZTE0M2QwNDIiLCJpYXQiOjE2MTM2NzI4MTIsImV4cCI6MTYxNDI3NzYxMn0.6frVwJqvTRYMW_nj6I_Z6Fky6yMol71Nuno7oh5bcUw" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/send-email-verification" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;email&quot; : &quot;vikassandhaqsau99@gmail.com&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="sdfgdfg" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="asdfsafwaf" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot; : &quot;vikassand9@gmail.com&quot; ,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="sdfgdfg" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="asdfsafwaf" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot; : &quot;vikassan9@gmail.com&quot; ,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="sdfgdfg" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="asdfsafwaf" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot; : &quot;vikassand9@gmail.com&quot; ,&#10;  &quot;password&quot; : &quot;vistagram@1232&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot; : &quot;vikassand9@gmail.com&quot; ,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;userName&quot; : &quot;kai43&quot; ,&#10;  &quot;email&quot; : &quot;vikassand9@gmail.com&quot; ,&#10;  &quot;fullName&quot; : &quot;Vikas Sandhu&quot;,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;userName&quot; : &quot;kai4&quot; ,&#10;  &quot;email&quot; : &quot;vikassand9@gmail.com&quot; ,&#10;  &quot;fullName&quot; : &quot;Vikas Sandhu&quot;,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;userName&quot; : &quot;kai4&quot; ,&#10;  &quot;email&quot; : &quot;vikassandhu99@gmail.com&quot; ,&#10;  &quot;fullName&quot; : &quot;Vikas Sandhu&quot;,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/send-email-verification" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;email&quot; : &quot;vikassandhaqsau99@gmail.com&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;userName&quot; : &quot;kai44&quot; ,&#10;  &quot;email&quot; : &quot;vikassandhu99@gmail.com&quot; ,&#10;  &quot;fullName&quot; : &quot;Vikas Sandhu&quot;,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/send-email-verification" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;email&quot; : &quot;vikassandhaqsau99@gmail.com&quot; &#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/send-email-verification" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;email&quot; : &quot;vikassandhu99@gmail.com&quot; &#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/send-email-verification" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;userName&quot; : &quot;kai4&quot; ,&#10;  &quot;email&quot; : &quot;vikassandhu999@gmail.com&quot; ,&#10;  &quot;fullName&quot; : &quot;Vikas Sandhu&quot;,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;userName&quot; : &quot;kai4&quot; , &#10;  &quot;email&quot; : &quot;vikassandhu999@gmail.com&quot; , &#10;  &quot;fullName&quot; : &quot;Vikas Sandhu&quot;,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/user/create" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.user#5">
+    <configuration name="user#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test/api/user.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="GetCustomerProfileUseCase" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/test/customer/usecase/getCustomerProfile.spec.ts" />
-      <test-names>
-        <test-name value="GetCustomerProfileUseCase" />
-      </test-names>
+    <configuration name="user#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test/api/user.http" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="GetCustomerProfileUseCase.should throw NotEnoughInformationProviedError" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/customer/usecase/getCustomerProfile.spec.ts" />
-      <test-names>
-        <test-name value="GetCustomerProfileUseCase" />
-        <test-name value="should throw NotEnoughInformationProviedError" />
-      </test-names>
+    <configuration name="user#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test/api/user.http" index="4" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="customerRepo" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/test/customer/repos/customerRepo.spec.ts" />
-      <test-names>
-        <test-name value="customerRepo" />
-      </test-names>
+    <configuration name="user#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test/api/user.http" index="5" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="test" />
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -121,11 +809,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.GetCustomerProfileUseCase" />
-        <item itemvalue="Jest.GetCustomerProfileUseCase.should throw NotEnoughInformationProviedError" />
-        <item itemvalue="Jest.CreateCustomerUseCase" />
-        <item itemvalue="Jest.customerRepo" />
-        <item itemvalue="npm.test" />
+        <item itemvalue="HTTP Request.user#5" />
+        <item itemvalue="HTTP Request.user#4" />
+        <item itemvalue="HTTP Request.user#3" />
+        <item itemvalue="HTTP Request.user#1" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +828,12 @@
       <workItem from="1613049926758" duration="37118000" />
       <workItem from="1613154804872" duration="692000" />
       <workItem from="1613184569480" duration="12045000" />
-      <workItem from="1613200599009" duration="16386000" />
+      <workItem from="1613200599009" duration="25864000" />
+      <workItem from="1613355799172" duration="1206000" />
+      <workItem from="1613357373446" duration="5879000" />
+      <workItem from="1613440766458" duration="27511000" />
+      <workItem from="1613624213111" duration="30037000" />
+      <workItem from="1613710596225" duration="5855000" />
     </task>
     <task id="LOCAL-00001" summary="DDD &amp; CustomerModel">
       <created>1613224247546</created>
@@ -149,16 +842,18 @@
       <option name="project" value="LOCAL" />
       <updated>1613224247546</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Result class added for better error handling">
+      <created>1613276852524</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613276852525</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/src/shared/packages/auth/index.d.ts" />
-      </list>
-    </option>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
@@ -168,7 +863,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -177,45 +884,62 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="DDD &amp; CustomerModel" />
-    <option name="LAST_COMMIT_MESSAGE" value="DDD &amp; CustomerModel" />
+    <MESSAGE value="Result class added for better error handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Result class added for better error handling" />
   </component>
   <component name="WindowStateProjectService">
     <state x="610" y="348" width="689" height="408" key="#Notifications" timestamp="1613050052320">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="610" y="348" width="689" height="408" key="#Notifications/0.28.1920.1052@0.28.1920.1052" timestamp="1613050052320" />
-    <state x="105" y="131" width="1720" height="852" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1613116614820">
+    <state x="455" y="112" width="1000" height="879" key="#Plugins" timestamp="1613357400110">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="105" y="131" width="1720" height="852" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1613116614820" />
-    <state x="721" y="205" width="468" height="693" key="#com.intellij.ide.util.MemberChooser" timestamp="1613217591672">
+    <state x="455" y="112" width="1000" height="879" key="#Plugins/0.28.1920.1052@0.28.1920.1052" timestamp="1613357400110" />
+    <state x="105" y="131" width="1720" height="852" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1613660388578">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="721" y="205" width="468" height="693" key="#com.intellij.ide.util.MemberChooser/0.28.1920.1052@0.28.1920.1052" timestamp="1613217591672" />
-    <state x="640" y="376" width="630" height="351" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1613215537439">
+    <state x="105" y="131" width="1720" height="852" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1613660388578" />
+    <state x="721" y="205" width="468" height="693" key="#com.intellij.ide.util.MemberChooser" timestamp="1613673854429">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="640" y="376" width="630" height="351" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.28.1920.1052@0.28.1920.1052" timestamp="1613215537439" />
+    <state x="721" y="205" width="468" height="693" key="#com.intellij.ide.util.MemberChooser/0.28.1920.1052@0.28.1920.1052" timestamp="1613673854429" />
+    <state x="640" y="281" width="630" height="542" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613355879696">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="640" y="281" width="630" height="542" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1613355879696" />
+    <state x="627" y="244" width="655" height="615" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613481825923">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="627" y="244" width="655" height="615" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1613481825923" />
+    <state x="606" y="391" width="698" height="322" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog" timestamp="1613670760228">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="606" y="391" width="698" height="322" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1613670760228" />
+    <state x="640" y="376" width="620" height="351" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1613485069501">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="640" y="376" width="620" height="351" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.28.1920.1052@0.28.1920.1052" timestamp="1613485069501" />
     <state x="690" y="255" width="530" height="594" key="FileChooserDialogImpl" timestamp="1613155190334">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="690" y="255" width="530" height="594" key="FileChooserDialogImpl/0.28.1920.1052@0.28.1920.1052" timestamp="1613155190334" />
-    <state width="1892" height="460" key="GridCell.Tab.0.bottom" timestamp="1613272788602">
+    <state width="1892" height="287" key="GridCell.Tab.0.bottom" timestamp="1613718940322">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="460" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1613272788602" />
-    <state width="1892" height="460" key="GridCell.Tab.0.center" timestamp="1613272788602">
+    <state width="1892" height="287" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1613718940322" />
+    <state width="1892" height="287" key="GridCell.Tab.0.center" timestamp="1613718940322">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="460" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1613272788602" />
-    <state width="1892" height="460" key="GridCell.Tab.0.left" timestamp="1613272788601">
+    <state width="1892" height="287" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1613718940322" />
+    <state width="1892" height="287" key="GridCell.Tab.0.left" timestamp="1613718940322">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="460" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1613272788601" />
-    <state width="1892" height="460" key="GridCell.Tab.0.right" timestamp="1613272788602">
+    <state width="1892" height="287" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1613718940322" />
+    <state width="1892" height="287" key="GridCell.Tab.0.right" timestamp="1613718940322">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="460" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1613272788602" />
+    <state width="1892" height="287" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1613718940322" />
     <state width="1892" height="316" key="GridCell.Tab.1.bottom" timestamp="1613126926655">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>

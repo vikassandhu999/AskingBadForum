@@ -2,6 +2,6 @@ import {BaseError} from "./BaseError";
 
 export class UnauthorizedAccessError extends BaseError {
     constructor() {
-        super(`You don't have permission to access the resource`, "accessType", 409);
+        super({message : "Don't permissions to access the resource"}, 409);
     }
 }

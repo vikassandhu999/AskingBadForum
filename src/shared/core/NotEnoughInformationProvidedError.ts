@@ -2,6 +2,6 @@ import {BaseError} from "./BaseError";
 
 export class NotEnoughInformationProvidedError extends BaseError {
     constructor() {
-        super(`Not enough information provided`, "information", 409);
+        super({message : "Missing auth tokens or user information"},409);
     }
 }

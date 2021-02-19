@@ -1,0 +1,38 @@
+POST http://localhost:5000/v1/user/create
+Content-Type: application/json
+
+{
+  "userName" : "kaizen404" ,
+  "email" : "kaizen.tech404@gmail.com" ,
+  "fullName" : "Vikas Sandhu",
+  "password" : "vistagram@123"
+}
+
+###
+POST http://localhost:5000/v1/user/send-email-verification
+Content-Type: application/json
+
+{
+"email" : "kaizen.tech404@gmail.com"
+}
+
+###
+POST http://localhost:5000/v1/user/verify-email
+Content-Type: application/json
+
+{
+  "verificationToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3MTcxMzQsImV4cCI6MTYxMzcxNzQ5NH0.RPV9v4ZQvqo0rMQ6NI9EcsrvQE50J2JDUViT7XHXRtQ"
+}
+
+###
+POST http://localhost:5000/v1/user/login
+Content-Type: application/json
+
+{
+  "email" : "kaizen.tech404@gmail.com" ,
+  "password" : "vistagram@123"
+}
+
+
+###
+GET http://localhost:5000/v1/user

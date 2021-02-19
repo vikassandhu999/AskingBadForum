@@ -51,7 +51,6 @@ describe('GetCustomerProfileUseCase', () => {
         await customerRepo.deleteOne(customerId);
     });
 
-
     it("should throw UnauthorizedAccessError", async () => {
         try {
             const response = await usecase.run({},
