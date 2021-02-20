@@ -58,16 +58,184 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../AskingBad/src/modules/forum/infra/database/mongoose/models" />
       <recent name="$PROJECT_DIR$/src/modules/user/infra/http/middlewares" />
       <recent name="$PROJECT_DIR$/src/modules/user/domain" />
       <recent name="$PROJECT_DIR$/src/modules/user/domain/user" />
       <recent name="$PROJECT_DIR$/src/modules/customer/domain" />
-      <recent name="$PROJECT_DIR$/src/modules/inventory" />
     </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc5MDcyOCwiZXhwIjoxNjEzNzkwNzg4fQ.svVL0dlMa7CoAfeYugb7EGWmuTskb-mXHdTjAyrnqsk" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc5MDMyOSwiZXhwIjoxNjE0Mzk1MTI5fQ.26NgJ03zhKfB4FJ-HKFeXp_L_ypsGhQj2BfUsPrjEHM" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000/v1/user" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc5MDU3OSwiZXhwIjoxNjEzNzkwNjM5fQ.9LjwyFgMwACHyGIP1PrkeIwyTW8bDSd7Vmzq0uXODUc" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc5MDMyOSwiZXhwIjoxNjE0Mzk1MTI5fQ.26NgJ03zhKfB4FJ-HKFeXp_L_ypsGhQj2BfUsPrjEHM" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000/v1/user" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc5MDM4MiwiZXhwIjoxNjEzNzkwNDQyfQ.XoS0Mba0WpUq1U-AG_fjWs_dmgYjdTpKIvFql309Vag" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc5MDMyOSwiZXhwIjoxNjE0Mzk1MTI5fQ.26NgJ03zhKfB4FJ-HKFeXp_L_ypsGhQj2BfUsPrjEHM" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000/v1/user" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc5MDMyOSwiZXhwIjoxNjEzNzkwMzg5fQ.vl0qVPMva3dsaM6Fb_2rvYeAWa6UTNCRkkdym_3khoU" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc5MDMyOSwiZXhwIjoxNjE0Mzk1MTI5fQ.26NgJ03zhKfB4FJ-HKFeXp_L_ypsGhQj2BfUsPrjEHM" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000/v1/user" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc5MDMyOSwiZXhwIjoxNjEzNzkwMzg5fQ.vl0qVPMva3dsaM6Fb_2rvYeAWa6UTNCRkkdym_3khoU" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc5MDMyOSwiZXhwIjoxNjE0Mzk1MTI5fQ.26NgJ03zhKfB4FJ-HKFeXp_L_ypsGhQj2BfUsPrjEHM" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/verify-email" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;verificationToken&quot; : &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3MTcxMzQsImV4cCI6MTYxMzcxNzQ5NH0.RPV9v4ZQvqo0rMQ6NI9EcsrvQE50J2JDUViT7XHXRtQ&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc4NzY5NiwiZXhwIjoxNjEzNzg3NzU2fQ.cA63N-PLQIcz1-hXb_fPUfmO7MFA3OwGGs3t2t_Pgmw" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc4NTYwNiwiZXhwIjoxNjE0MzkwNDA2fQ.TnUrF5VSXALocIH9PTLk7VQruDEkZL6y8Ks16VyT1tE" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot; : &quot;kaizen.tech404@gmail.com&quot; ,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -812,21 +980,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.user#5">
-    <configuration name="user#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test/api/user.http" runType="Run single request">
+  <component name="RunManager" selected="HTTP Request.user#5 (1)">
+    <configuration name="user#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/../AskingBad/test/api/user.http" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="user#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test/api/user.http" index="3" runType="Run single request">
+    <configuration name="user#4 (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/../AskingBad/test/api/user.http" index="4" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="user#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test/api/user.http" index="4" runType="Run single request">
+    <configuration name="user#5 (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/../AskingBad/test/api/user.http" index="5" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="user#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test/api/user.http" index="5" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
+    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/../AskingBad/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
@@ -837,11 +1005,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.user#5" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="HTTP Request.user#4" />
+        <item itemvalue="HTTP Request.user#5 (1)" />
         <item itemvalue="HTTP Request.user#3" />
-        <item itemvalue="HTTP Request.user#1" />
+        <item itemvalue="HTTP Request.user#4 (1)" />
+        <item itemvalue="npm.dev (1)" />
+        <item itemvalue="HTTP Request.user#5" />
       </list>
     </recent_temporary>
   </component>
@@ -862,7 +1030,7 @@
       <workItem from="1613440766458" duration="27511000" />
       <workItem from="1613624213111" duration="30037000" />
       <workItem from="1613710596225" duration="12260000" />
-      <workItem from="1613783964099" duration="5039000" />
+      <workItem from="1613783964099" duration="13240000" />
     </task>
     <task id="LOCAL-00001" summary="DDD &amp; CustomerModel">
       <created>1613224247546</created>
@@ -934,10 +1102,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="640" y="281" width="630" height="542" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1613355879696" />
-    <state x="627" y="244" width="655" height="615" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613481825923">
+    <state x="627" y="244" width="655" height="615" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613795953141">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="627" y="244" width="655" height="615" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1613481825923" />
+    <state x="627" y="244" width="655" height="615" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1613795953141" />
     <state x="606" y="391" width="698" height="322" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog" timestamp="1613670760228">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -950,22 +1118,22 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="690" y="255" width="530" height="594" key="FileChooserDialogImpl/0.28.1920.1052@0.28.1920.1052" timestamp="1613155190334" />
-    <state width="1892" height="248" key="GridCell.Tab.0.bottom" timestamp="1613788608226">
+    <state width="1892" height="574" key="GridCell.Tab.0.bottom" timestamp="1613793293926">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="248" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1613788608226" />
-    <state width="1892" height="248" key="GridCell.Tab.0.center" timestamp="1613788608225">
+    <state width="1892" height="574" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1613793293926" />
+    <state width="1892" height="574" key="GridCell.Tab.0.center" timestamp="1613793293926">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="248" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1613788608225" />
-    <state width="1892" height="248" key="GridCell.Tab.0.left" timestamp="1613788608225">
+    <state width="1892" height="574" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1613793293926" />
+    <state width="1892" height="574" key="GridCell.Tab.0.left" timestamp="1613793293925">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="248" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1613788608225" />
-    <state width="1892" height="248" key="GridCell.Tab.0.right" timestamp="1613788608226">
+    <state width="1892" height="574" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1613793293925" />
+    <state width="1892" height="574" key="GridCell.Tab.0.right" timestamp="1613793293926">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="248" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1613788608226" />
+    <state width="1892" height="574" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1613793293926" />
     <state width="1892" height="316" key="GridCell.Tab.1.bottom" timestamp="1613126926655">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>

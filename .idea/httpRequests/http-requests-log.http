@@ -1,5 +1,64 @@
 GET http://localhost:5000/v1/user
 
+<> 2021-02-20T084226.200.json
+
+###
+
+GET http://localhost:5000/v1/user
+
+<> 2021-02-20T084214.200.json
+
+###
+
+GET http://localhost:5000/v1/user
+
+<> 2021-02-20T084208.200.json
+
+###
+
+GET http://localhost:5000/v1/user
+
+<> 2021-02-20T083939.200.json
+
+###
+
+GET http://localhost:5000/v1/user
+
+<> 2021-02-20T083622.200.json
+
+###
+
+POST http://localhost:5000/v1/user/verify-email
+Content-Type: application/json
+
+{
+  "verificationToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3MTcxMzQsImV4cCI6MTYxMzcxNzQ5NH0.RPV9v4ZQvqo0rMQ6NI9EcsrvQE50J2JDUViT7XHXRtQ"
+}
+
+<> 2021-02-20T083612.404.json
+
+###
+
+GET http://localhost:5000/v1/user
+
+<> 2021-02-20T083540.200.json
+
+###
+
+POST http://localhost:5000/v1/user/login
+Content-Type: application/json
+
+{
+  "email" : "kaizen.tech404@gmail.com" ,
+  "password" : "vistagram@123"
+}
+
+<> 2021-02-20T083530.200.json
+
+###
+
+GET http://localhost:5000/v1/user
+
 <> 2021-02-20T075136.200.json
 
 ###
@@ -311,98 +370,6 @@ Content-Type: application/json
 }
 
 <> 2021-02-19T120937.404.json
-
-###
-
-POST http://localhost:5000/v1/user/login
-Content-Type: application/json
-
-{
-  "email" : "vikassand9@gmail.com" ,
-  "password" : "vistagram@123"
-}
-
-<> 2021-02-19T120922.403.json
-
-###
-
-POST http://localhost:5000/v1/user/send-email-verification
-Content-Type: application/json
-
-{
-"email" : "vikassandhaqsau99@gmail.com"
-}
-
-###
-
-POST http://localhost:5000/v1/user/send-email-verification
-Content-Type: application/json
-
-{
-"email" : "vikassandhaqsau99@gmail.com"
-}
-
-<> 2021-02-19T120227.404.json
-
-###
-
-POST http://localhost:5000/v1/user/login
-Content-Type: application/json
-
-{
-  "email" : "vikassand9@gmail.com" ,
-  "password" : "vistagram@123"
-}
-
-<> 2021-02-19T120106.403.json
-
-###
-
-POST http://localhost:5000/v1/user/login
-Content-Type: application/json
-
-{
-  "email" : "vikassand9@gmail.com" ,
-  "password" : "vistagram@123"
-}
-
-<> 2021-02-18T115652.200.json
-
-###
-
-POST http://localhost:5000/v1/user/login
-Content-Type: application/json
-
-{
-  "email" : "vikassand9@gmail.com" ,
-  "password" : "vistagram@123"
-}
-
-<> 2021-02-18T114846.403.json
-
-###
-
-POST http://localhost:5000/v1/user/login
-Content-Type: application/json
-
-{
-  "email" : "vikassand9@gmail.com" ,
-  "password" : "vistagram@123"
-}
-
-<> 2021-02-18T114748.403.json
-
-###
-
-POST http://localhost:5000/v1/user/login
-Content-Type: application/json
-
-{
-  "email" : "vikassand9@gmail.com" ,
-  "password" : "vistagram@123"
-}
-
-<> 2021-02-18T114436.200.json
 
 ###
 
