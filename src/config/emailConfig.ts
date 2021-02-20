@@ -1,7 +1,7 @@
 export default {
-    senderEmail : "navrajs703@gmail.com",
+    senderEmail : "xyz@gmail.com",
     emailVerificationTokenSecret : "asdfkjlsadflksadjflksajdflk",
     emailVerificationExpiryTime : 360,
-    nodemailerUserEmail : "navrajs703@gmail.com",
-    nodemailerUserPassword : "@elonmusk"
+    nodemailerUserEmail : "xyz@gmail.com",
+    nodemailerUserPassword : "xyz"
 }

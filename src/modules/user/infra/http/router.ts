@@ -1,13 +1,13 @@
-import express from "express";
+import express, {Request} from "express";
 import {createUserUseCase} from "../../usecase/CreateUser";
 import {sendEmailVerificationUseCase} from "../../usecase/SendEmailVerification";
 import {loginUserUseCase} from "../../usecase/LoginUser";
 import {verifyUserEmailUseCase} from "../../usecase/VerifyUserEmail";
 import {authMiddleware} from "./middlewares";
-
+import {getUserProfileUseCase} from "../../usecase/GetUserProfile";
+import {UserContext} from "../../domain/UserContext";
 
 const userRouter = express.Router();
-
 
 userRouter.post("/user/create",
     async (req, res, next) => {
@@ -18,7 +18,6 @@ userRouter.post("/user/create",
             next(e);
         }
     });
-
 
 userRouter.post("/user/send-email-verification",
     async (req, res, next) => {
@@ -53,10 +52,13 @@ userRouter.post("/user/login",
     });
 
 
-userRouter.get("/user" , async (req, res, next) => {
+userRouter.get("/user" ,
+    authMiddleware.getUserContext()
+    ,async (req : Request, res, next) => {
     try {
-            const userContext = await authMiddleware.getUserContext(req);
-            res.status(200).json(userContext);
+            const response = await getUserProfileUseCase.run({} , req.context as UserContext);
+
+            res.status(200).json(response);
     } catch (e) {
         next(e);
     }

@@ -26,7 +26,8 @@ export class LoginUserUseCase {
         const authSecret = uuid();
 
         const refreshToken = JWT.createToken({
-            userId : user.userId
+            userId : user.userId,
+            userName : user.userName,
         } , authSecret , authConfig.refreshExpiryTime);
 
         await this.userRepository.setAuthSecret(user.userId , authSecret);

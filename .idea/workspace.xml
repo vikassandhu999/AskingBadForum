@@ -1,107 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <expand />
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="084bdb5a-f7cb-416b-aa27-a2b2854f5e17" name="Default Changelist" comment="Result class added for better error handling">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/domain/User.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/infra/http/middlewares/authMiddleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/infra/http/middlewares/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/infra/http/router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/mapper/UserMapper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/repositories/IUserRepository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/repositories/imples/MongooseUserRepository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/repositories/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/service/IEmailService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/service/imples/NodeMailerEmailService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/service/imples/SendGridEmailService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/service/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/CreateUser/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/CreateUser/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/CreateUser/usecase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/usecase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/LoginUser/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/LoginUser/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/LoginUser/usecase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/SendEmailVerification/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/SendEmailVerification/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/SendEmailVerification/usecase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/VerifyUserEmail/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/VerifyUserEmail/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/user/usecase/VerifyUserEmail/usecase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/core/AppError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/core/FormatError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/core/RejectOrReturn.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/core/Utils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infra/http/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infra/http/router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/infra/http/utils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/packages/Password/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/packages/jwt/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/api/user.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/shared/JWT.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/shared/Password.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/shared/checkForTS.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/user/repository/userRepository.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/user/service/emailService.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/user/service/emailServiceTest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/user/usecase/createUser.spec.ts" afterDir="false" />
+    <list default="true" id="084bdb5a-f7cb-416b-aa27-a2b2854f5e17" name="Default Changelist" comment="User Module Completed">
+      <change afterPath="$PROJECT_DIR$/@types/express/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/domain/Customer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/domain/CustomerAddress.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/domain/CustomerAuthSecret.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/domain/CustomerEmail.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/domain/CustomerPassword.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/dto/CustomerProfile.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/dto/ICustomerClaims.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/mapper/CustomerAddressMapper.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/mapper/CustomerAuthSecret.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/mapper/CustomerMapper.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/repository/IAuthRepo.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/repository/ICustomerRepo.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/repository/imples/MongooseAuthRepo.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/repository/imples/MongooseCustomerRepo.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/repository/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/service/authService.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/service/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/dto.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/emailConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/response.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/CreateCustomer/usecase.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/forum/domain/Comment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/forum/domain/Thread.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/domain/UserContext.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/response.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/GetCustomerProfile/usecase.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/infra/database/mongoose/models/UserModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/dto.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/infra/http/middlewares/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/response.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/customer/usecase/LoginCustomer/usecase.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/core/BaseError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/core/BaseError.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/core/NotEnoughInformationProvidedError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/core/NotEnoughInformationProvidedError.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/core/UnathorizedAccessError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/core/UnathorizedAccessError.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/customer/domain/password.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/customer/domain/password.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/customer/usecase/getCustomerProfile.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/customer/usecase/getCustomerProfile.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/authConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/authConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/domain/UserContext.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/domain/UserContext.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/infra/http/middlewares/authMiddleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/infra/http/middlewares/authMiddleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/infra/http/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/infra/http/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/usecase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/usecase/GetUserProfile/usecase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/usecase/LoginUser/usecase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/usecase/LoginUser/usecase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/core/AssertContext.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/core/AssertContext.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/packages/jwt/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/packages/jwt/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +36,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../AskingBad" />
   </component>
   <component name="ProjectId" id="1oKzAC5h7yKe9n0uedGAzFYNilM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -149,6 +68,115 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc4NjgxOCwiZXhwIjoxNjEzNzg2ODc4fQ._i_gZAlTnGVEHilDfvxuqHPpGYiG2QoKvhGGT9NJMrI" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc4NTYwNiwiZXhwIjoxNjE0MzkwNDA2fQ.TnUrF5VSXALocIH9PTLk7VQruDEkZL6y8Ks16VyT1tE" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000/v1/user" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc4NTYwNiwiZXhwIjoxNjEzNzg1NjY2fQ.TnHdUs7eWylddptd12AOhciyZcMJwzOwBxkuFvBmMcE" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJ1c2VyTmFtZSI6ImthaXplbjQwNCIsImlhdCI6MTYxMzc4NTYwNiwiZXhwIjoxNjE0MzkwNDA2fQ.TnUrF5VSXALocIH9PTLk7VQruDEkZL6y8Ks16VyT1tE" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000/v1/user" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3ODU1OTEsImV4cCI6MTYxMzc4NTY1MX0.aRH18SlRnEss4kdJnu5lQiGzXcOSCwcbpfqj-Dy3dKs" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3MTg3NzUsImV4cCI6MTYxNDMyMzU3NX0.sj_PgeY8-oTrDkyMbQgcVuraXgTjmsJuC_cu6Sbo_74" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:5000/v1/user/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot; : &quot;kaizen.tech404@gmail.com&quot; ,&#10;  &quot;password&quot; : &quot;vistagram@123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="access-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3ODU0ODEsImV4cCI6MTYxMzc4NTU0MX0.oy2WovDo_LG4g44f0UL1R4CbpyLxIharKg4lF3zTfQE" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="refresh-token" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3MTg3NzUsImV4cCI6MTYxNDMyMzU3NX0.sj_PgeY8-oTrDkyMbQgcVuraXgTjmsJuC_cu6Sbo_74" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000/v1/user" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -810,10 +838,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="HTTP Request.user#5" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="HTTP Request.user#4" />
         <item itemvalue="HTTP Request.user#3" />
         <item itemvalue="HTTP Request.user#1" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -833,7 +861,8 @@
       <workItem from="1613357373446" duration="5879000" />
       <workItem from="1613440766458" duration="27511000" />
       <workItem from="1613624213111" duration="30037000" />
-      <workItem from="1613710596225" duration="5855000" />
+      <workItem from="1613710596225" duration="12260000" />
+      <workItem from="1613783964099" duration="4726000" />
     </task>
     <task id="LOCAL-00001" summary="DDD &amp; CustomerModel">
       <created>1613224247546</created>
@@ -849,7 +878,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613276852525</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="User &amp; Fourm Domain Modeling">
+      <created>1613719201365</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613719201365</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -863,19 +899,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -885,7 +909,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="DDD &amp; CustomerModel" />
     <MESSAGE value="Result class added for better error handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Result class added for better error handling" />
+    <MESSAGE value="User &amp; Fourm Domain Modeling" />
+    <MESSAGE value="User Module Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Module Completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="610" y="348" width="689" height="408" key="#Notifications" timestamp="1613050052320">
@@ -924,22 +950,22 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="690" y="255" width="530" height="594" key="FileChooserDialogImpl/0.28.1920.1052@0.28.1920.1052" timestamp="1613155190334" />
-    <state width="1892" height="287" key="GridCell.Tab.0.bottom" timestamp="1613718940322">
+    <state width="1892" height="248" key="GridCell.Tab.0.bottom" timestamp="1613788608226">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="287" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1613718940322" />
-    <state width="1892" height="287" key="GridCell.Tab.0.center" timestamp="1613718940322">
+    <state width="1892" height="248" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1613788608226" />
+    <state width="1892" height="248" key="GridCell.Tab.0.center" timestamp="1613788608225">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="287" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1613718940322" />
-    <state width="1892" height="287" key="GridCell.Tab.0.left" timestamp="1613718940322">
+    <state width="1892" height="248" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1613788608225" />
+    <state width="1892" height="248" key="GridCell.Tab.0.left" timestamp="1613788608225">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="287" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1613718940322" />
-    <state width="1892" height="287" key="GridCell.Tab.0.right" timestamp="1613718940322">
+    <state width="1892" height="248" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1613788608225" />
+    <state width="1892" height="248" key="GridCell.Tab.0.right" timestamp="1613788608226">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1892" height="287" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1613718940322" />
+    <state width="1892" height="248" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1613788608226" />
     <state width="1892" height="316" key="GridCell.Tab.1.bottom" timestamp="1613126926655">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>

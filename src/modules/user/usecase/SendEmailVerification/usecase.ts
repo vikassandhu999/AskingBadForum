@@ -50,8 +50,6 @@ export class SendVerificationEmailUseCase {
             userId : user.userId,
         } , emailConfig.emailVerificationTokenSecret , emailConfig.emailVerificationExpiryTime);
 
-        console.log("EmailVerificaitonToken : " + verificationToken);
-
         let verificationEmail = this.createVerificationEmail(userEmail, verificationToken);
 
         await this.emailService.sendEmail(verificationEmail);

@@ -5,7 +5,6 @@ import validate from "validate.js";
 import {JWT} from "../../../../shared/packages/jwt";
 import emailConfig from "../../../../config/emailConfig";
 
-
 export class VerifyUserEmailUseCase {
     private readonly userRepository : IUserRepository;
 
@@ -25,7 +24,6 @@ export class VerifyUserEmailUseCase {
 
         return new VerifyUserEmailResponse();
     }
-
 
     private async validateInput(params: VerifyUserEmailDTO): Promise<void> {
         const validation = validate(params, this.inputConstraints);
