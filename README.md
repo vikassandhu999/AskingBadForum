@@ -1,8 +1,8 @@
-# AskingBadForum ( Clean Code Architecture and Tests )
+## AskingBadForum ( Clean Code Architecture and Tests )
 
 ##### A Public web forum created with Node.js, Typescript and MongoDB. Clean Code practices and testable code
 
-## Table of contents
+### Table of contents
 * [Features](#features)
 * [Technologies](#technologies)
 * [Author](#author)
