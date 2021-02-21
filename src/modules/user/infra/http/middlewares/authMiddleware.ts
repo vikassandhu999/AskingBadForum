@@ -17,7 +17,8 @@ export class AuthMiddleware {
         return async (req: Request, res: Response, next: NextFunction) => {
             try {
                 const accessToken = req.cookies["access-token"];
-                if (!accessToken) throw new NotEnoughInformationProvidedError();
+                if (!accessToken)
+                    this.fail(res, new NotEnoughInformationProvidedError());
 
                 const decodedAccessToken = await JWT.verify(accessToken, authConfig.accessSecret);
 
@@ -33,22 +34,25 @@ export class AuthMiddleware {
 
                 //if accessToken fails
                 const refreshToken = req.cookies["refresh-token"];
-                if (!refreshToken) throw new NotEnoughInformationProvidedError();
+                if (!refreshToken)
+                    return this.fail(res, new NotEnoughInformationProvidedError());
 
                 const decodedData = JWT.decode(refreshToken);
-                if (!decodedData) throw new NotEnoughInformationProvidedError();
+                if (!decodedData)
+                    return this.fail(res, new NotEnoughInformationProvidedError());
 
                 const userId = decodedData.userId;
 
                 const authSecret = await this.userRepository.getAuthSecret(userId);
 
-                if (!authSecret) throw new UnauthorizedAccessError();
+                if (!authSecret)
+                    return this.fail(res, new UnauthorizedAccessError());
 
                 const decodedRefreshToken = await JWT.verify(refreshToken, authSecret);
 
-                if (!decodedRefreshToken) throw new UnauthorizedAccessError();
+                if (!decodedRefreshToken)
+                    return this.fail(res, new UnauthorizedAccessError());
 
-                //create new accesstoken
                 const newAccessToken = JWT.createToken({
                     userId: decodedRefreshToken.userId,
                     userName: decodedRefreshToken.userName
@@ -64,19 +68,24 @@ export class AuthMiddleware {
                 res.cookie("access-token" , newAccessToken);
                 next();
             } catch (err) {
-                if (err instanceof BaseError) {
-                    return res.status(err.httpCode).json({
-                        status: 'error',
-                        error: err.error
-                    });
-                } else {
-                    return res.status(500).json({
-                        status: 'error',
-                        message: "Internal App Error",
-                        error : ""
-                    });
-                }
+               this.fail(res, err);
             }
         }
     }
+
+    protected fail(res: Response, err: any) {
+        if (err instanceof BaseError) {
+            return res.status(err.httpCode).json({
+                status: 'error',
+                error: err.error
+            });
+        } else {
+            return res.status(500).json({
+                status: 'error',
+                message: "Internal App Error",
+                error : ""
+            });
+        }
+    }
+
 }
