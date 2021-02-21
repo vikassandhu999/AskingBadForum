@@ -5,4 +5,6 @@ export interface ICommentRepository {
     exists(commentId : string) : Promise<boolean>;
     getById(commentId : string) : Promise<Comment | null>;
     getReplies(threadId : string, replyTo ?: string) : Promise<Comment[]>
+
+    deleteAll() : Promise<void>
 }

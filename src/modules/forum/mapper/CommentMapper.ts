@@ -1,7 +1,7 @@
 import {Comment} from "../domain/Comment";
 
 export class CommentMapper {
-    toDomain(raw : any) : Comment {
+    public static toDomain(raw : any) : Comment {
         return new Comment({
             userId : raw.user_id,
             commentId : raw.comment_id,
@@ -14,10 +14,10 @@ export class CommentMapper {
         });
     }
 
-    toPersistence(comment : Comment) : any {
+    public static toPersistence(comment : Comment) : any {
         return {
             user_id : comment.userId,
-            userName : comment.userName,
+            user_name : comment.userName,
             comment_id : comment.commentId,
             reply_to : comment.replyTo,
             thread_id : comment.threadId,

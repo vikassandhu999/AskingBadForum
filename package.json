@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "start" : "ts-node --files src/app.ts",
     "dev": "nodemon --config nodemon.json src/app.ts",
     "dev:debug": "nodemon --config nodemon.json --inspect-brk src/app.ts",
     "test": "jest"

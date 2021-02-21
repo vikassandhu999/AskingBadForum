@@ -1,0 +1,19 @@
+GET http://localhost:5000/v1/forum/read-thread
+
+###
+POST http://localhost:5000/v1/forum/create-thread
+Content-Type: application/json
+
+{
+  "title" : "This is an awesomefghdfghfgh thread" ,
+  "body" : "This is the body dfhnrfghdfhffor the awesome thread"
+}
+
+###
+POST http://localhost:5000/v1/forum/create-comment
+Content-Type: application/json
+
+{
+  "threadId": "38e60655-9b48-4baa-a57c-6834e6ca1ffc",
+  "body" : "This is the body for another awesome reply"
+}

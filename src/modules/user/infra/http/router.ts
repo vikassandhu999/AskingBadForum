@@ -9,7 +9,7 @@ import {UserContext} from "../../domain/UserContext";
 
 const userRouter = express.Router();
 
-userRouter.post("/user/create",
+userRouter.post("/create",
     async (req, res, next) => {
         try {
             const response = await createUserUseCase.run(req.body, {});
@@ -19,7 +19,7 @@ userRouter.post("/user/create",
         }
     });
 
-userRouter.post("/user/send-email-verification",
+userRouter.post("/send-email-verification",
     async (req, res, next) => {
         try {
             const response = await sendEmailVerificationUseCase.run(req.body, {});
@@ -29,7 +29,7 @@ userRouter.post("/user/send-email-verification",
         }
     });
 
-userRouter.post("/user/verify-email",
+userRouter.post("/verify-email",
     async (req, res, next) => {
         try {
             const response = await verifyUserEmailUseCase.run(req.body, {});
@@ -39,7 +39,7 @@ userRouter.post("/user/verify-email",
         }
     });
 
-userRouter.post("/user/login",
+userRouter.post("/login",
     async (req, res, next) => {
         try {
             const response = await loginUserUseCase.run(req.body, {});
@@ -52,12 +52,11 @@ userRouter.post("/user/login",
     });
 
 
-userRouter.get("/user" ,
+userRouter.get("/" ,
     authMiddleware.getUserContext()
     ,async (req : Request, res, next) => {
     try {
             const response = await getUserProfileUseCase.run({} , req.context as UserContext);
-
             res.status(200).json(response);
     } catch (e) {
         next(e);

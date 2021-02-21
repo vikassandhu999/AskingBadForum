@@ -44,7 +44,7 @@ export class CreateCommentUseCase {
         if(!threadIdExists) throw new ThreadIdDoesNotExistError();
         if(!!replyTo && !commentIdExists) throw new CommentIdDoesNotExistError();
 
-        const comment = new Comment({userId : context.userId , userName : context.userName ,replyTo,body});
+        const comment = new Comment({userId : context.userId , userName : context.userName,threadId ,replyTo,body});
 
         await this.commentRepository.save(comment);
 
@@ -63,13 +63,12 @@ export class CreateCommentUseCase {
         threadId: {
             presence: true,
         },
-        replyTo: {
-            min: 6,
-        },
         body: {
             presence: true,
-            min: 6,
-            max: 500
+            length: {
+                minimum: 6,
+                maximum: 500
+            }
         }
     }
 }

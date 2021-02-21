@@ -47,13 +47,17 @@ export class CreateThreadUseCase {
     private inputConstraints = {
         title : {
             presence : true ,
-            min : 20 ,
-            max : 150
+            length: {
+                minimum: 20,
+                maximum: 150
+            }
         },
         body : {
             presence : true ,
-            min : 6 ,
-            max : 500
+            length: {
+                minimum: 6,
+                maximum: 500
+            }
         }
     }
 }

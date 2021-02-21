@@ -1,7 +1,7 @@
 import {Thread} from "../domain/Thread";
 
 export class ThreadMapper {
-    toDomain(raw : any) : Thread {
+    public static toDomain(raw : any) : Thread {
         return new Thread({
             userId : raw.user_id,
             userName : raw.user_name,
@@ -13,7 +13,7 @@ export class ThreadMapper {
         });
     }
 
-    toPersistence(thread : Thread) : any {
+    public static toPersistence(thread : Thread) : any {
         return {
             user_id : thread.userId,
             user_name : thread.userName,

@@ -15,7 +15,7 @@ const commentSchema = new Schema({
     user_id: { required : true, type : String },
     user_name: { required : true, type : String },
     thread_id:{ required : true, type : String},
-    reply_to: { required : true, type : String },
+    reply_to: { type : String },
     body: { required : true, type : String }
 } , schemaOptions);
 
