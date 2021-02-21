@@ -13,5 +13,4 @@ export function AssertContext(context: any, props: AssertContextProps) {
     if ((!!props.authLevel) && props.authLevel != context.authLevel) {
         throw new UnauthorizedAccessError();
     }
-
 }

@@ -14,3 +14,11 @@ yarn add body-parser @types/body-parser multer @types/multer cookie-parser @type
 
 #random key
 node -e console.log(require('crypto').randomBytes(48).toString('hex'))
+
+
+# Forum API
+## usecases
+    * Create Thread
+    * ReplyTo Comments
+    * getReplies (paged)
+    * edit() // may be there
