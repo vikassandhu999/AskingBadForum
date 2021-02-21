@@ -22,3 +22,6 @@ node -e console.log(require('crypto').randomBytes(48).toString('hex'))
     * ReplyTo Comments
     * getReplies (paged)
     * edit() // may be there
+    
+## Refrencing in database
+    decided to go with manual referencing rather than DRefs - it will be efficient for the app to make two queries rather than $lookup operation

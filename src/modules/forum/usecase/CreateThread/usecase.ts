@@ -1,13 +1,19 @@
 import validate from "validate.js";
 import {BaseError} from "../../../../shared/core/BaseError";
-import {CreateThreadDTO} from "./types";
+import {CreateThreadDTO, CreateThreadResponse, UserNameDoesNotExistError} from "./types";
 import {Utils} from "../../../../shared/core/Utils";
 import {UserContext} from "../../../user/domain/UserContext";
 import {AssertContext} from "../../../../shared/core/AssertContext";
+import {IUserRepository} from "../../../user/repositories/IUserRepository";
+import {IThreadRepository} from "../../repositories/IThreadRepository";
+import {Thread} from "../../domain/Thread";
 
-export class CreateThreadEmailUseCase {
-
-    constructor() {
+export class CreateThreadUseCase {
+    private readonly userRepository : IUserRepository;
+    private readonly threadRepository : IThreadRepository;
+    constructor(userRepository : IUserRepository, threadRepository : IThreadRepository) {
+        this.userRepository = userRepository;
+        this.threadRepository = threadRepository;
     }
 
     public async run(params: CreateThreadDTO , context: UserContext): Promise<any> {
@@ -17,9 +23,16 @@ export class CreateThreadEmailUseCase {
 
         const body = Utils.encodeHTML(params.body);
         const title = Utils.encodeHTML(params.title);
-        // get user
 
-        //create comment
+        const userExists = await this.userRepository.usernameExists(context.userName);
+
+        if(!userExists) throw new UserNameDoesNotExistError();
+
+        const thread = new Thread({userId : context.userId , userName : context.userName , title,body});
+
+        await this.threadRepository.save(thread);
+
+        return new CreateThreadResponse(thread.toDTO());
 
     }
 

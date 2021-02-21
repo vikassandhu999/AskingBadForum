@@ -5,7 +5,7 @@ export type CommentDTO  = {
     userName : string;
     commentId : string;
     threadId : string;
-    replyTo : string;
+    replyTo ?: string;
     body : string;
     createdAt : Date;
     updatedAt : Date;
@@ -16,7 +16,7 @@ export class Comment {
     public userName : string;
     public commentId : string;
     public threadId : string;
-    public replyTo : string;
+    public replyTo ?: string;
     public body : string;
     public createdAt : Date;
     public updatedAt : Date;
