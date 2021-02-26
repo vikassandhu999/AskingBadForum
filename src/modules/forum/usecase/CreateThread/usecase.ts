@@ -7,6 +7,7 @@ import {AssertContext} from "../../../../shared/core/AssertContext";
 import {IUserRepository} from "../../../user/repositories/IUserRepository";
 import {IThreadRepository} from "../../repositories/IThreadRepository";
 import {Thread} from "../../domain/Thread";
+import { Assert } from "../../../../shared/core/Assert";
 
 export class CreateThreadUseCase {
     private readonly userRepository : IUserRepository;
@@ -17,6 +18,7 @@ export class CreateThreadUseCase {
     }
 
     public async run(params: CreateThreadDTO , context: UserContext): Promise<any> {
+        console.log("Hitted route create-thread");
         AssertContext(context , {isAuthenticated : true});
 
         await this.validateInput(params);
@@ -24,9 +26,9 @@ export class CreateThreadUseCase {
         const body = Utils.encodeHTML(params.body);
         const title = Utils.encodeHTML(params.title);
 
-        const userExists = await this.userRepository.usernameExists(context.userName);
+        const usernameExists = await this.userRepository.usernameExists(context.userName);
 
-        if(!userExists) throw new UserNameDoesNotExistError();
+        Assert(!usernameExists, new UserNameDoesNotExistError());
 
         const thread = new Thread({userId : context.userId , userName : context.userName , title,body});
 

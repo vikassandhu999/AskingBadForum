@@ -18,7 +18,7 @@ export class AuthMiddleware {
             try {
                 const accessToken = req.cookies["access-token"];
                 if (!accessToken)
-                    this.fail(res, new NotEnoughInformationProvidedError());
+                    return this.fail(res, new NotEnoughInformationProvidedError());
 
                 const decodedAccessToken = await JWT.verify(accessToken, authConfig.accessSecret);
 
@@ -29,7 +29,7 @@ export class AuthMiddleware {
                         userName: decodedAccessToken.userName,
                         isAuthenticated: true
                     };
-                    next();
+                    return next();
                 }
 
                 //if accessToken fails

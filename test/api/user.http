@@ -2,7 +2,7 @@ POST http://localhost:5000/v1/user/create
 Content-Type: application/json
 
 {
-  "userName" : "kaizen404" ,
+  "userName" : "kaizen409784" ,
   "email" : "kaizen.tech404@gmail.com" ,
   "fullName" : "Vikas Sandhu",
   "password" : "vistagram@123"

@@ -5,27 +5,31 @@ import {IUserRepository} from "../../repositories/IUserRepository";
 import {User} from "../../domain/User";
 import Password from "../../../../shared/packages/Password";
 import {SendVerificationEmailUseCase} from "../SendEmailVerification/usecase";
+import { Assert } from "../../../../shared/core/Assert";
+import { MongooseUserRepository } from '../../repositories/imples/MongooseUserRepository';
 
 export class CreateUserUseCase {
     private readonly userRepository: IUserRepository;
-    private readonly sendVerificationEmail : SendVerificationEmailUseCase
+    private readonly sendVerificationEmail : SendVerificationEmailUseCase;
+
     constructor(userRepository: IUserRepository,sendVerificationEmail : SendVerificationEmailUseCase) {
         this.userRepository = userRepository;
         this.sendVerificationEmail = sendVerificationEmail;
     }
 
     public async run(params: CreateUserDTO, context: any): Promise<CreateUserResponse> {
+
         await this.validateInput(params);
 
         const {email, userName, password} = params;
 
         const emailExists = await this.userRepository.emailExists(email);
 
-        if (emailExists) throw new EmailAlreadyExistError();
+        Assert(emailExists, new EmailAlreadyExistError());
 
         const usernameExists = await this.userRepository.usernameExists(userName);
 
-        if (usernameExists) throw new UsernameAlreadyTakenError();
+        Assert(usernameExists, new UsernameAlreadyTakenError());
 
         const hashedPassword = await Password.hashPassword(password);
 

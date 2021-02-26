@@ -3,6 +3,7 @@ import {createCommentUseCase} from "../../usecase/CreateComment";
 import {UserContext} from "../../../user/domain/UserContext";
 import {authMiddleware} from "../../../user/infra/http/middlewares";
 import {createThreadUseCase} from "../../usecase/CreateThread";
+import { readThreadUseCase } from "../../usecase/ReadThread";
 
 const forumRouter = Router();
 
@@ -24,14 +25,16 @@ forumRouter.post("/create-comment",
             const response = await createCommentUseCase.run(req.body, req.context as UserContext);
             res.status(200).json(response);
         } catch (e) {
-            console.log(e);
             next(e);
         }
     });
 
-forumRouter.get("/read-thread", async (req: Request, res, next) => {
+forumRouter.post("/read-thread",
+    authMiddleware.getUserContext(),
+    async (req: Request, res, next) => {
     try {
-        res.status(200).json("Hello World");
+        const response = await readThreadUseCase.run(req.body, req.context as UserContext);
+        res.status(200).json(response);
     } catch (e) {
         next(e);
     }

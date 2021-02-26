@@ -8,14 +8,14 @@ export type CreateThreadDTO = {
 
 export class UserNameDoesNotExistError extends BaseError {
     constructor() {
-        super({message : "your username doesn't exist"}, 404);
+        super({message : "your username doesn't exist"}, 403);
     }
 }
 
 
 export class ThreadIdDoesNotExistError extends BaseError {
     constructor() {
-        super({message : "thread ID doesn't exist"}, 404);
+        super({message : "thread ID doesn't exist"}, 403);
     }
 }
 

@@ -5,7 +5,6 @@ export type Email = {
     body : string;
 }
 
-
 export interface IEmailService {
     sendEmail(email : Email) : Promise<void>;
 }

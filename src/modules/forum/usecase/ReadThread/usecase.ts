@@ -39,7 +39,6 @@ export class ReadThreadUseCase {
         if(!thread) throw new ThreadIdDoesNotExistError();
 
         return new ReadThreadResponse(thread , comment , replies);
-
     }
 
     private async validateInput(params: ReadThreadDTO): Promise<void> {
@@ -53,6 +52,6 @@ export class ReadThreadUseCase {
     private inputConstraints = {
         threadId : {
             presence: true
-        },
+        }
     }
 }

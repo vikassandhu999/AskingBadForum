@@ -17,3 +17,11 @@ Content-Type: application/json
   "threadId": "38e60655-9b48-4baa-a57c-6834e6ca1ffc",
   "body" : "This is the body for another awesome reply"
 }
+
+###
+POST http://localhost:5000/v1/forum/read-thread
+Content-Type: application/json
+
+{
+  "threadId": "38e60655-9b48-4baa-a57c-6834e6ca1ffc"
+}

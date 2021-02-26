@@ -34,11 +34,15 @@ export class CreateCommentUseCase {
         const body = Utils.encodeHTML(params.body);
         const replyTo = params.replyTo;
 
-        const [usernameExists , threadIdExists, commentIdExists] = await Promise.all([
-           this.userRepository.usernameExists(context.userName) ,
-           this.threadRepository.exists(threadId) ,
-            replyTo?this.commentRepository.exists(replyTo) : true
-        ]);
+        // const [usernameExists , threadIdExists, commentIdExists] = await Promise.all([
+        //    this.userRepository.usernameExists(context.userName) ,
+        //    this.threadRepository.exists(threadId) ,
+        //     replyTo?this.commentRepository.exists(replyTo as string) : true
+        // ]);
+
+        const usernameExists = await this.userRepository.usernameExists(context.userName);
+        const threadIdExists = await this.threadRepository.exists(threadId);
+        const commentIdExists = replyTo?await this.commentRepository.exists(replyTo as string) : true;
 
         if(!usernameExists) throw new UserNameDoesNotExistError();
         if(!threadIdExists) throw new ThreadIdDoesNotExistError();

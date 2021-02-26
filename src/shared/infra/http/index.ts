@@ -13,14 +13,14 @@ const app = express();
 // app.use(helmet());
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cors());
+// app.use(cors());
 
 if(process.env.ENV!="production") {
     app.use(morgan("dev"));
 }
 
-app.use("/v1/user" , userRouter);
 app.use("/v1/forum" , forumRouter);
+app.use("/v1/user" , userRouter);
 
 app.use(handleExpressErrors);
 
