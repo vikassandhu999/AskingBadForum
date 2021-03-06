@@ -10,12 +10,16 @@ import {forumRouter} from "../../../modules/forum/infra/http/router";
 
 const app = express();
 
+app.use(cors({
+    origin: [`http://localhost:$3000`, `https://localhost:5000`],
+    credentials: true
+}));
+
 // app.use(helmet());
 app.use(bodyParser.json());
 app.use(cookieParser());
-// app.use(cors());
 
-if(process.env.ENV!="production") {
+if(process.env.NODE_ENV!="production") {
     app.use(morgan("dev"));
 }
 

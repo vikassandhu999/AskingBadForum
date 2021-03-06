@@ -5,7 +5,7 @@ import {IUserRepository} from "../../repositories/IUserRepository";
 import {User} from "../../domain/User";
 import Password from "../../../../shared/packages/Password";
 import {SendVerificationEmailUseCase} from "../SendEmailVerification/usecase";
-import { Assert } from "../../../../shared/core/Assert";
+import { assert } from "../../../../shared/core/Assert";
 import { MongooseUserRepository } from '../../repositories/imples/MongooseUserRepository';
 
 export class CreateUserUseCase {
@@ -25,11 +25,11 @@ export class CreateUserUseCase {
 
         const emailExists = await this.userRepository.emailExists(email);
 
-        Assert(emailExists, new EmailAlreadyExistError());
+        assert(!emailExists, new EmailAlreadyExistError());
 
         const usernameExists = await this.userRepository.usernameExists(userName);
 
-        Assert(usernameExists, new UsernameAlreadyTakenError());
+        assert(!usernameExists, new UsernameAlreadyTakenError());
 
         const hashedPassword = await Password.hashPassword(password);
 

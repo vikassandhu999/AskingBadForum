@@ -2,17 +2,15 @@ import {v4 as uuid} from "uuid";
 require("dotenv").config();
 
 import {mongooseConnection} from "../../../src/shared/infra/db/mongoose/connection";
-import {threadRepository} from "../../../src/modules/forum/repositories";
-import {Thread} from "../../../src/modules/forum/domain/Thread";
 
-const fakeThreadId = uuid();
+const fakePostId = uuid();
 const fakeUserName = "kaizen404";
 const fakeUserId = uuid();
 
-const fakeThread0 = new Thread({
+const fakePost0 = new Post({
     userId : fakeUserId ,
     userName : fakeUserName ,
-    threadId : fakeThreadId,
+    postId : fakePostId,
     title : "This is an awesome thread",
     body : "Reply to thread0"
 });
@@ -23,30 +21,30 @@ describe('threadRepo', () => {
 
     beforeAll(async () => {
         connection = await mongooseConnection(process.env.MONGO_URL_DEV as string);
-        await threadRepository.deleteAll();
+        await postRepository.deleteAll();
     });
 
     afterAll(async ()=>{
-        await threadRepository.deleteAll();
+        await postRepository.deleteAll();
         // @ts-ignore
         await connection.close();
     })
 
     it("save", async () => {
-        await threadRepository.save(fakeThread0);
+        await postRepository.save(fakePost0);
     });
 
     it('exists', async () => {
-        const exists = await threadRepository.exists(fakeThread0.threadId);
+        const exists = await postRepository.exists(fakePost0.postId);
         expect(exists).toBe(true);
-        const exists1 = await threadRepository.exists(uuid());
+        const exists1 = await postRepository.exists(uuid());
         expect(exists1).toBe(false);
 
     });
 
     it('getById', async () => {
-        const result = await threadRepository.getById(fakeThread0.threadId);
-        expect(result).toEqual(fakeThread0);
+        const result = await postRepository.getById(fakePost0.postId);
+        expect(result).toEqual(fakePost0);
     });
 
 });

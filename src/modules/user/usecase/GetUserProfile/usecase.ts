@@ -3,6 +3,7 @@ import {UserContext} from "../../domain/UserContext";
 import {GetUserProfileResponse, ProfileNotFoundError} from "./types";
 import _ from "lodash";
 import {AssertContext} from "../../../../shared/core/AssertContext";
+import {assert} from "../../../../shared/core/Assert";
 
 export class GetUserProfileUseCase {
     private readonly userRepository : IUserRepository;
@@ -18,8 +19,9 @@ export class GetUserProfileUseCase {
 
         const user = await this.userRepository.getById(userId);
 
-        if(!user) throw new ProfileNotFoundError();
+        assert(!!user, new ProfileNotFoundError());
 
+        // @ts-ignore
         const dtoUser = user.toDTO();
 
         return new GetUserProfileResponse( _.omit(dtoUser , ["authSecret" , "password" , "isDeleted" , "isEmailVerified"]));

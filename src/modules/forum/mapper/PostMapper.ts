@@ -1,11 +1,11 @@
-import {Thread} from "../domain/Thread";
+import { Post } from "../domain/Post";
 
-export class ThreadMapper {
-    public static toDomain(raw : any) : Thread {
-        return new Thread({
+export class PostMapper {
+    public static toDomain(raw : any) : Post {
+        return new Post({
             userId : raw.user_id,
             userName : raw.user_name,
-            threadId : raw.thread_id,
+            postId : raw.post_id,
             title : raw.title,
             body : raw.body,
             createdAt : raw.created_at,
@@ -13,11 +13,11 @@ export class ThreadMapper {
         });
     }
 
-    public static toPersistence(thread : Thread) : any {
+    public static toPersistence(thread : Post) : any {
         return {
             user_id : thread.userId,
             user_name : thread.userName,
-            thread_id : thread.threadId,
+            post_id : thread.postId,
             title : thread.title,
             body : thread.body,
             created_at : thread.createdAt,

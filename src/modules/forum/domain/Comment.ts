@@ -4,7 +4,7 @@ export type CommentDTO  = {
     userId : string;
     userName : string;
     commentId : string;
-    threadId : string;
+    postId : string;
     replyTo ?: string;
     body : string;
     createdAt : Date;
@@ -15,7 +15,7 @@ export class Comment {
     public userId : string;
     public userName : string;
     public commentId : string;
-    public threadId : string;
+    public postId : string;
     public replyTo ?: string;
     public body : string;
     public createdAt : Date;
@@ -23,7 +23,7 @@ export class Comment {
     constructor(params : any) {
         this.userId = params.userId;
         this.userName = params.userName;
-        this.threadId = params.threadId;
+        this.postId = params.postId;
         this.commentId = params.commentId??uuid();
         this.replyTo = params.replyTo;
         this.body = params.body;
@@ -37,7 +37,7 @@ export class Comment {
             userName : this.userName,
             commentId : this.commentId,
             replyTo : this.replyTo,
-            threadId : this.threadId,
+            postId : this.postId,
             body : this.body,
             createdAt : this.createdAt,
             updatedAt : this.updatedAt

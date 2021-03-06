@@ -31,3 +31,14 @@
     will make use of this index, assuming there are no other 
     indexes.
    [Stackoverflow]https://stackoverflow.com/questions/22376741/can-a-compound-index-be-used-in-searching-a-single-field-in-mongodb
+   
+   
+### Errors and REST Response schemas
+    Response : {
+        status : "success" | "error"
+        data : {} | [{}] | null
+        error : {
+            type : "invalidParams" | "Unauthorised" | "other"
+            message : {} | [{}]
+        }
+    }

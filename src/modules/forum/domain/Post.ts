@@ -1,19 +1,19 @@
 import {v4 as uuid} from "uuid";
 
-export type ThreadDTO  = {
+export type PostDTO  = {
    userId : string;
    userName : string;
-   threadId : string;
+   postId : string;
    title : string;
    body : string;
    createdAt : Date,
     updatedAt : Date
 }
 
-export class Thread {
+export class Post {
     public userId : string;
     public userName : string;
-    public threadId : string;
+    public postId : string;
     public title : string;
     public body : string;
     public createdAt : Date;
@@ -21,18 +21,18 @@ export class Thread {
     constructor(params : any) {
         this.userId  = params.userId;
         this.userName = params.userName;
-        this.threadId = params.threadId??uuid();
+        this.postId = params.postId??uuid();
         this.title = params.title;
         this.body = params.body;
         this.createdAt = params.createdAt??new Date();
         this.updatedAt = params.updatedAt??new Date();
     }
 
-    toDTO() : ThreadDTO {
+    toDTO() : PostDTO {
         return  {
             userId : this.userId,
             userName : this.userName,
-            threadId : this.threadId,
+            postId : this.postId,
             title : this.title,
             body : this.body,
             createdAt : this.createdAt,

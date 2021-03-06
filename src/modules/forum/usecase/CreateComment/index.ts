@@ -1,9 +1,8 @@
 import {CreateCommentUseCase} from "./usecase";
 import {userRepository} from "../../../user/repositories";
-import {commentRepository, threadRepository} from "../../repositories";
+import {commentRepository, postRepository} from "../../repositories";
 
-const createCommentUseCase = new CreateCommentUseCase(userRepository,threadRepository,commentRepository);
-
+const createCommentUseCase = new CreateCommentUseCase(userRepository,postRepository,commentRepository);
 
 export {
     createCommentUseCase

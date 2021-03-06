@@ -1,4 +1,4 @@
 
-export function Assert(predicate : boolean, err: any) {
-    if(predicate) throw err;
+export function assert(predicate : boolean, err: any) {
+    if(!predicate) throw err;
 }

@@ -1,7 +1,7 @@
 import {BaseError} from "../../../../shared/core/BaseError";
-import {ThreadDTO} from "../../domain/Thread";
+import { PostDTO } from "../../domain/Post";
 
-export type CreateThreadDTO = {
+export type CreatePostDTO = {
     title : string;
     body : string;
 }
@@ -12,17 +12,16 @@ export class UserNameDoesNotExistError extends BaseError {
     }
 }
 
-
-export class ThreadIdDoesNotExistError extends BaseError {
+export class PostDoesNotExistError extends BaseError {
     constructor() {
-        super({message : "thread ID doesn't exist"}, 403);
+        super({message : "post doesn't exist"}, 403);
     }
 }
 
-export class CreateThreadResponse {
+export class CreatePostResponse {
     public status : string = "success";
-    public data  : ThreadDTO;
-    constructor(data : ThreadDTO) {
+    public data  : PostDTO;
+    constructor(data : PostDTO) {
         this.data = data;
     }
 }

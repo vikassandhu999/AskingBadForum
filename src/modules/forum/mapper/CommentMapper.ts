@@ -6,7 +6,7 @@ export class CommentMapper {
             userId : raw.user_id,
             commentId : raw.comment_id,
             userName : raw.user_name,
-            threadId : raw.thread_id,
+            postId : raw.post_id,
             replyTo : raw.reply_to,
             body : raw.body,
             createdAt : raw.created_at,
@@ -20,7 +20,7 @@ export class CommentMapper {
             user_name : comment.userName,
             comment_id : comment.commentId,
             reply_to : comment.replyTo,
-            thread_id : comment.threadId,
+            post_id : comment.postId,
             body : comment.body,
             created_at : comment.createdAt,
             updated_at : comment.updatedAt

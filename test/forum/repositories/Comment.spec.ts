@@ -6,23 +6,22 @@ import {User} from "../../../src/modules/user/domain/User";
 import {userRepository} from "../../../src/modules/user/repositories";
 import {Comment} from "../../../src/modules/forum/domain/Comment";
 import {commentRepository} from "../../../src/modules/forum/repositories";
-import {threadId} from "worker_threads";
 
-const fakeThreadId = uuid();
+const fakePostId = uuid();
 const fakeUserName = "kaizen404";
 const fakeUserId = uuid();
 
 const fakeComment0 = new Comment({
     userId : fakeUserId ,
     userName : fakeUserName ,
-    threadId : fakeThreadId,
+    postId : fakePostId,
     body : "Reply to thread0"
 });
 
 const fakeComment1 = new Comment({
     userId : fakeUserId ,
     userName : fakeUserName ,
-    threadId : fakeThreadId,
+    postId : fakePostId,
     body : "Reply to thread0" ,
 });
 
@@ -31,7 +30,7 @@ const fakeReplyTo0 = new Comment({
     userId : fakeUserId ,
     userName : fakeUserName ,
     body : "Reply to comment0",
-    threadId : fakeThreadId,
+    postId : fakePostId,
     replyTo : fakeComment0.commentId
 });
 
@@ -40,7 +39,7 @@ const fakeReplyTo1 = new Comment({
     userId : fakeUserId ,
     userName : fakeUserName ,
     body : "Reply to comment2",
-    threadId : fakeThreadId,
+    postId : fakePostId,
     replyTo : fakeComment1.commentId
 });
 
@@ -75,7 +74,6 @@ describe('commentRepo', () => {
         expect(exists).toBe(true);
         const exists1 = await commentRepository.exists(uuid());
         expect(exists1).toBe(false);
-
     });
 
     it('getById', async () => {
@@ -93,11 +91,11 @@ describe('commentRepo', () => {
 
 
     it('getReplies', async () => {
-        const repliesToThread = await commentRepository.getReplies(fakeThreadId);
-        console.log(repliesToThread);
-        expect(repliesToThread[0]).toEqual(fakeComment0);
-        expect(repliesToThread[1]).toEqual(fakeComment1);
-        const repliesToComment0 = await commentRepository.getReplies(fakeThreadId , fakeComment0.commentId);
+        const repliesToPost = await commentRepository.getReplies(fakePostId);
+        console.log(repliesToPost);
+        expect(repliesToPost[0]).toEqual(fakeComment0);
+        expect(repliesToPost[1]).toEqual(fakeComment1);
+        const repliesToComment0 = await commentRepository.getReplies(fakePostId , fakeComment0.commentId);
         console.log(repliesToComment0);
         expect(repliesToComment0[0]).toEqual(fakeReplyTo0);
     });

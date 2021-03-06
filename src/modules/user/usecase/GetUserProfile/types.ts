@@ -8,7 +8,6 @@ export class GetUserProfileResponse {
     }
 }
 
-
 export class ProfileNotFoundError extends BaseError {
     constructor() {
         super({message : "Profile not found"}, 404);

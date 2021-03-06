@@ -6,6 +6,7 @@ import {BaseError} from "../../../../shared/core/BaseError";
 import emailConfig from "../../../../config/emailConfig";
 import {User} from "../../domain/User";
 import {JWT} from "../../../../shared/packages/jwt";
+import { assert } from "../../../../shared/core/Assert";
 
 export class SendVerificationEmailUseCase {
     private readonly emailService : IEmailService;
@@ -42,11 +43,11 @@ export class SendVerificationEmailUseCase {
         const userEmail = params.email;
 
         const user : User | null = await this.userRepository.getByEmail(userEmail);
-        if(!user) {
-            throw new UserEmailDoesNotExistError();
-        }
+
+        assert(!!user , new UserEmailDoesNotExistError());
 
         const verificationToken = JWT.createToken({
+            // @ts-ignore
             userId : user.userId,
         } , emailConfig.emailVerificationTokenSecret , emailConfig.emailVerificationExpiryTime);
 
@@ -56,7 +57,6 @@ export class SendVerificationEmailUseCase {
 
         return new SendVerificationEmailResponse();
     }
-
 
     private async validateInput(params: SendVerificationEmailDTO): Promise<void> {
         const validation = validate(params, this.inputConstraints);

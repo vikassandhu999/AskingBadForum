@@ -1,8 +1,8 @@
-import {Thread} from "../../domain/Thread";
 import {Comment} from "../../domain/Comment";
+import { Post } from "../../domain/Post";
 
-export type ReadThreadDTO = {
-    threadId : string;
+export type ReadPostDTO = {
+    postId : string;
     replyTo ?: string;
     pageNumber ?: number;
     limit ?: number;
@@ -11,9 +11,9 @@ export type ReadThreadDTO = {
 export class ReadThreadResponse {
     status : string = "success";
     data : object;
-    constructor(thread : Thread , comment : Comment | null , replies : Comment[]) {
+    constructor(post : Post , comment : Comment | null , replies : Comment[]) {
         this.data = {
-            thread ,
+            post ,
             comment ,
             replies
         }

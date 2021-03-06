@@ -1,47 +1,50 @@
 import {IUserRepository} from "../../../user/repositories/IUserRepository";
-import {IThreadRepository} from "../../repositories/IThreadRepository";
 import validate from "validate.js";
-import {ReadThreadDTO, ReadThreadResponse} from "./types";
+import { ReadThreadResponse, ReadPostDTO} from "./types";
 import {UserContext} from "../../../user/domain/UserContext";
 import {AssertContext} from "../../../../shared/core/AssertContext";
 import {BaseError} from "../../../../shared/core/BaseError";
 import {ICommentRepository} from "../../repositories/ICommentRepository";
-import {ThreadIdDoesNotExistError} from "../CreateThread/types";
+import { IPostRepository } from "../../repositories/IPostRepository";
+import { PostDoesNotExistError } from "../CreateComment/types";
+import { assert } from "../../../../shared/core/Assert";
+import { Post } from "../../domain/Post";
 
-export class ReadThreadUseCase {
+
+export class ReadPostUseCase {
     private readonly userRepository: IUserRepository;
-    private readonly threadRepository: IThreadRepository;
+    private readonly postRepository: IPostRepository;
     private readonly commentRepository: ICommentRepository;
 
     constructor(
         userRepository: IUserRepository,
-        threadRepository: IThreadRepository,
+        postRepository: IPostRepository,
         commentRepository : ICommentRepository
     ) {
         this.userRepository = userRepository;
-        this.threadRepository = threadRepository;
+        this.postRepository = postRepository;
         this.commentRepository = commentRepository;
     }
 
-    public async run(params: ReadThreadDTO, context: UserContext): Promise<any> {
+    public async run(params: ReadPostDTO, context: UserContext): Promise<any> {
         AssertContext(context, {isAuthenticated: true});
         await this.validateInput(params);
 
-        const threadId = params.threadId;
+        const postId = params.postId;
         const replyTo = params.replyTo;
 
-        const [thread , comment , replies] = await Promise.all([
-            this.threadRepository.getById(threadId),
+        const [post , comment , replies] = await Promise.all([
+            this.postRepository.getById(postId),
             replyTo?this.commentRepository.getById(replyTo) : null ,
-            this.commentRepository.getReplies(threadId , replyTo)
+            this.commentRepository.getReplies(postId , replyTo)
         ]);
 
-        if(!thread) throw new ThreadIdDoesNotExistError();
+        assert(!!post , new PostDoesNotExistError());
 
-        return new ReadThreadResponse(thread , comment , replies);
+        return new ReadThreadResponse(post as Post, comment , replies);
     }
 
-    private async validateInput(params: ReadThreadDTO): Promise<void> {
+    private async validateInput(params: ReadPostDTO): Promise<void> {
         const validation = validate(params, this.inputConstraints);
         if (!validation) {
             return;
@@ -50,7 +53,7 @@ export class ReadThreadUseCase {
     }
 
     private inputConstraints = {
-        threadId : {
+        postId : {
             presence: true
         }
     }

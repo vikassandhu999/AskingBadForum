@@ -1,10 +1,10 @@
 import {MongooseCommentRepository} from "./imples/MongooseCommentRepository";
-import {MongooseThreadRepository} from "./imples/MongooseThreadRepository";
+import { MongoosePostRepository } from "./imples/MongoosePostRepository";
 
 const commentRepository = new MongooseCommentRepository();
-const threadRepository = new MongooseThreadRepository();
+const postRepository = new MongoosePostRepository();
 
 export {
     commentRepository ,
-    threadRepository
+    postRepository
 }

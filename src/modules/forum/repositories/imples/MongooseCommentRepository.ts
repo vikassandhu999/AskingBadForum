@@ -17,8 +17,8 @@ export class MongooseCommentRepository implements ICommentRepository {
         return CommentMapper.toDomain(comment);
     }
 
-    async getReplies(threadId: string, replyTo?: string): Promise<Comment[]> {
-        const replies = await this.model.find({thread_id : threadId , reply_to : replyTo});
+    async getReplies(postId: string, replyTo?: string): Promise<Comment[]> {
+        const replies = await this.model.find({post_id : postId , reply_to : replyTo});
         if(!replies) return [];
         return replies.map((reply) => CommentMapper.toDomain(reply));
     }
