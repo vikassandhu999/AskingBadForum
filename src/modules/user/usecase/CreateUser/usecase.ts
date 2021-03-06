@@ -7,6 +7,8 @@ import Password from "../../../../shared/packages/Password";
 import {SendVerificationEmailUseCase} from "../SendEmailVerification/usecase";
 import { assert } from "../../../../shared/core/Assert";
 import { MongooseUserRepository } from '../../repositories/imples/MongooseUserRepository';
+import {HttpErrors} from "../../../../shared/infra/http/errorCode";
+import {InvalidParamsError} from "../../../../shared/core/InvalidParamsError";
 
 export class CreateUserUseCase {
     private readonly userRepository: IUserRepository;
@@ -57,7 +59,7 @@ export class CreateUserUseCase {
         if (!validation) {
             return;
         }
-        throw new BaseError(validation, 400);
+        throw new InvalidParamsError(validation);
     }
 
     private inputConstraints = {

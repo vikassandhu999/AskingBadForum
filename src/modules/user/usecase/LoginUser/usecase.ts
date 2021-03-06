@@ -7,6 +7,8 @@ import Password from "../../../../shared/packages/Password";
 import {IUserRepository} from "../../repositories/IUserRepository";
 import {JWT} from "../../../../shared/packages/jwt";
 import authConfig from "../../../../config/authConfig";
+import {HttpErrors} from "../../../../shared/infra/http/errorCode";
+import {InvalidParamsError} from "../../../../shared/core/InvalidParamsError";
 
 type GetLoginTokensResponse = {accessToken : string , refreshToken : string};
 
@@ -59,7 +61,7 @@ export class LoginUserUseCase {
         if (!validation) {
             return;
         }
-        throw new BaseError(validation, 400);
+        throw new InvalidParamsError(validation);
     }
 
     private inputConstraints = {

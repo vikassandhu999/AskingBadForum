@@ -15,7 +15,6 @@ export class UserMapper {
         });
     }
 
-
     public static toPersistence(user: User): any {
         return {
             user_id: user.userId,

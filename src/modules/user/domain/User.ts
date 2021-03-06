@@ -13,7 +13,6 @@ export type UserDTO = {
 }
 
 export class User {
-
     public userId: string;
     public userName: string;
     public fullName: string;
@@ -24,19 +23,19 @@ export class User {
     public createdAt: Date;
     public authSecret?: string;
 
-    constructor(params : any) {
-            this.userId = params.userId??uuid();
-            this.userName = params.userName;
-            this.fullName = params.fullName;
-            this.email = params.email;
-            this.password = params.password;
-            this.isEmailVerified = params.isEmailVerified??false;
-            this.isDeleted = params.isDeleted??false;
-            this.createdAt = params.createdAt??new Date();
-            this.authSecret = params.authSecret??undefined;
+    constructor(params: any) {
+        this.userId = params.userId ?? uuid();
+        this.userName = params.userName;
+        this.fullName = params.fullName;
+        this.email = params.email;
+        this.password = params.password;
+        this.isEmailVerified = params.isEmailVerified ?? false;
+        this.isDeleted = params.isDeleted ?? false;
+        this.createdAt = params.createdAt ?? new Date();
+        this.authSecret = params.authSecret ?? undefined;
     }
 
-    toDTO() : UserDTO {
+    toDTO(): UserDTO {
         return {
             userId: this.userId,
             userName: this.userName,

@@ -3,11 +3,10 @@ import {createCommentUseCase} from "../../usecase/CreateComment";
 import {UserContext} from "../../../user/domain/UserContext";
 import {authMiddleware} from "../../../user/infra/http/middlewares";
 import { createPostUseCase } from "../../usecase/CreatePost";
-import { readPostUseCase } from "../../usecase/ReadPost";
 
 const forumRouter = Router();
 
-forumRouter.post("/create-post",
+forumRouter.post("/post",
     authMiddleware.getUserContext(),
     async (req: Request, res, next) => {
         try {
@@ -18,27 +17,47 @@ forumRouter.post("/create-post",
         }
     });
 
-forumRouter.post("/create-comment",
+forumRouter.post("/post/:postId/comment",
     authMiddleware.getUserContext(),
     async (req: Request, res, next) => {
         try {
-            const response = await createCommentUseCase.run(req.body, req.context as UserContext);
+            const postId = req.params.postId;
+            const replyTo = req.params.replyTo;
+            const body = req.params.body;
+
+            const response = await createCommentUseCase.run({postId , replyTo, body}, req.context as UserContext);
             res.status(200).json(response);
         } catch (e) {
             next(e);
         }
     });
 
-forumRouter.post("/read-post",
+
+forumRouter.get("/post/:postId",
     authMiddleware.getUserContext(),
     async (req: Request, res, next) => {
     try {
-        const response = await readPostUseCase.run(req.body, req.context as UserContext);
-        res.status(200).json(response);
+        // const response = await readPostUseCase.run(req.body, req.context as UserContext);
+        res.status(200).json({"response" : ""});
     } catch (e) {
         next(e);
     }
 });
+
+
+forumRouter.get("/post/:postId/comment/:replyTo",
+    authMiddleware.getUserContext(),
+    async (req: Request, res, next) => {
+        try {
+            const postId = req.params.postId;
+            const replyTo = req.params.replyTo;
+
+            // const response = await readPostUseCase.run(req.body, req.context as UserContext);
+            res.status(200).json({"response" : ""});
+        } catch (e) {
+            next(e);
+        }
+    });
 
 
 export {

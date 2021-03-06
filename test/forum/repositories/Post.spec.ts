@@ -2,6 +2,9 @@ import {v4 as uuid} from "uuid";
 require("dotenv").config();
 
 import {mongooseConnection} from "../../../src/shared/infra/db/mongoose/connection";
+import { Post } from "../../../src/modules/forum/domain/Post";
+import { postRepository } from "../../../src/modules/forum/repositories/index";
+
 
 const fakePostId = uuid();
 const fakeUserName = "kaizen404";

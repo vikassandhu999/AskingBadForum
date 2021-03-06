@@ -1,4 +1,5 @@
 import {BaseError} from "../../../../shared/core/BaseError";
+import { HttpErrors } from "../../../../shared/infra/http/errorCode";
 
 export type CreateUserDTO = {
     userName: string;
@@ -13,12 +14,12 @@ export class CreateUserResponse {
 
 export class UsernameAlreadyTakenError extends BaseError {
     constructor() {
-        super({userName : "Username already taken"}, 400);
+        super("Username already exists" ,HttpErrors.ALREADY_EXISTS ,{userName : "Username already exists"});
     }
 }
 
 export class EmailAlreadyExistError extends BaseError {
     constructor() {
-        super({email : "Email already exist"}, 400);
+        super("Email already exists" ,HttpErrors.ALREADY_EXISTS ,{email : "Email already exists"});
     }
 }

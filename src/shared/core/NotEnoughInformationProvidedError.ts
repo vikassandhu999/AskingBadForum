@@ -1,7 +1,8 @@
 import {BaseError} from "./BaseError";
+import {HttpErrors} from "../infra/http/errorCode";
 
 export class NotEnoughInformationProvidedError extends BaseError {
     constructor() {
-        super({message : "Missing auth tokens or user information"},409);
+        super("Missing auth tokens or user information",HttpErrors.UNAUTHENTICATED);
     }
 }

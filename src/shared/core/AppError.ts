@@ -1,7 +1,8 @@
 import {BaseError} from "./BaseError";
+import {HttpErrors} from "../infra/http/errorCode";
 
 export class AppError extends BaseError {
     constructor() {
-        super({message : "Internal Error" }, 500);
+        super("Internal error", HttpErrors.UNKNOWN);
     }
 }

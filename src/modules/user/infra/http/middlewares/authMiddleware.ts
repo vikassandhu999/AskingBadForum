@@ -75,15 +75,12 @@ export class AuthMiddleware {
 
     protected fail(res: Response, err: any) {
         if (err instanceof BaseError) {
-            return res.status(err.httpCode).json({
-                status: 'error',
-                error: err.error
-            });
+            return res.status(err.httpCode).json(err);
         } else {
             return res.status(500).json({
                 status: 'error',
                 message: "Internal App Error",
-                error : ""
+                errorInfo : null
             });
         }
     }

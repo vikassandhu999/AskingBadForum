@@ -4,6 +4,7 @@ import {BaseError} from "../../../../shared/core/BaseError";
 import validate from "validate.js";
 import {JWT} from "../../../../shared/packages/jwt";
 import emailConfig from "../../../../config/emailConfig";
+import {InvalidParamsError} from "../../../../shared/core/InvalidParamsError";
 
 export class VerifyUserEmailUseCase {
     private readonly userRepository : IUserRepository;
@@ -30,7 +31,7 @@ export class VerifyUserEmailUseCase {
         if (!validation) {
             return;
         }
-        throw new BaseError(validation, 400);
+        throw new InvalidParamsError(validation);
     }
 
     private inputConstraints = {

@@ -7,6 +7,8 @@ import emailConfig from "../../../../config/emailConfig";
 import {User} from "../../domain/User";
 import {JWT} from "../../../../shared/packages/jwt";
 import { assert } from "../../../../shared/core/Assert";
+import {HttpErrors} from "../../../../shared/infra/http/errorCode";
+import {InvalidParamsError} from "../../../../shared/core/InvalidParamsError";
 
 export class SendVerificationEmailUseCase {
     private readonly emailService : IEmailService;
@@ -53,6 +55,8 @@ export class SendVerificationEmailUseCase {
 
         let verificationEmail = this.createVerificationEmail(userEmail, verificationToken);
 
+        console.log(verificationEmail);
+
         await this.emailService.sendEmail(verificationEmail);
 
         return new SendVerificationEmailResponse();
@@ -63,7 +67,7 @@ export class SendVerificationEmailUseCase {
         if (!validation) {
             return;
         }
-        throw new BaseError(validation, 400);
+        throw new InvalidParamsError(validation);
     }
 
     private inputConstraints = {

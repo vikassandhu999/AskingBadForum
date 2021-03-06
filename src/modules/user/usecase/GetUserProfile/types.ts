@@ -1,4 +1,5 @@
 import {BaseError} from "../../../../shared/core/BaseError";
+import {HttpErrors} from "../../../../shared/infra/http/errorCode";
 
 export class GetUserProfileResponse {
     status : string = "success";
@@ -10,6 +11,6 @@ export class GetUserProfileResponse {
 
 export class ProfileNotFoundError extends BaseError {
     constructor() {
-        super({message : "Profile not found"}, 404);
+        super("Profile not found", HttpErrors.NOT_FOUND);
     }
 }

@@ -9,7 +9,7 @@ import {UserContext} from "../../domain/UserContext";
 
 const userRouter = express.Router();
 
-userRouter.post("/create",
+userRouter.post("/user",
     async (req, res, next) => {
         try {
             const response = await createUserUseCase.run(req.body, {});
@@ -19,27 +19,40 @@ userRouter.post("/create",
         }
     });
 
-userRouter.post("/send-email-verification",
-    async (req, res, next) => {
+userRouter.get("/user",
+    authMiddleware.getUserContext()
+    , async (req: Request, res, next) => {
         try {
-            const response = await sendEmailVerificationUseCase.run(req.body, {});
+            const response = await getUserProfileUseCase.run({}, req.context as UserContext);
             res.status(200).json(response);
         } catch (e) {
             next(e);
         }
     });
 
-userRouter.post("/verify-email",
+userRouter.get("/user/email/:email/verify",
     async (req, res, next) => {
         try {
-            const response = await verifyUserEmailUseCase.run(req.body, {});
+            const email = req.params.email;
+            const response = await sendEmailVerificationUseCase.run({email}, {});
             res.status(200).json(response);
         } catch (e) {
             next(e);
         }
     });
 
-userRouter.post("/login",
+userRouter.post("/user/email/verify",
+    async (req, res, next) => {
+        try {
+            const verificationToken = req.body.verificationToken;
+            const response = await verifyUserEmailUseCase.run({verificationToken}, {});
+            res.status(200).json(response);
+        } catch (e) {
+            next(e);
+        }
+    });
+
+userRouter.post("/user/login",
     async (req, res, next) => {
         try {
             const response = await loginUserUseCase.run(req.body, {});
@@ -50,18 +63,6 @@ userRouter.post("/login",
             next(e);
         }
     });
-
-
-userRouter.get("/" ,
-    authMiddleware.getUserContext()
-    ,async (req : Request, res, next) => {
-    try {
-            const response = await getUserProfileUseCase.run({} , req.context as UserContext);
-            res.status(200).json(response);
-    } catch (e) {
-        next(e);
-    }
-});
 
 export {
     userRouter

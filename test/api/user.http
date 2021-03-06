@@ -1,27 +1,22 @@
-POST http://localhost:5000/v1/user/create
+POST http://localhost:5000/v1/user
 Content-Type: application/json
 
 {
-  "userName" : "kaizen409784" ,
-  "email" : "kaizen.tech404@gmail.com" ,
+  "userName" : "kaizedsafn9784" ,
+  "email" : "kaizen.tdsaf4@gmail.com" ,
   "fullName" : "Vikas Sandhu",
   "password" : "vistagram@123"
 }
 
 ###
-POST http://localhost:5000/v1/user/send-email-verification
-Content-Type: application/json
-
-{
-"email" : "kaizen.tech404@gmail.com"
-}
+GET http://localhost:5000/v1/user/email/kaizen.tech404@gmail.com/verify
 
 ###
-POST http://localhost:5000/v1/user/verify-email
+POST http://localhost:5000/v1/user/email/verify
 Content-Type: application/json
 
 {
-  "verificationToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjY3MjQyMi00NWUzLTQ2ZjEtOTk0NC1iOWJlYzkwYzU0MjciLCJpYXQiOjE2MTM3MTcxMzQsImV4cCI6MTYxMzcxNzQ5NH0.RPV9v4ZQvqo0rMQ6NI9EcsrvQE50J2JDUViT7XHXRtQ"
+  "verificationToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMzhiMDY3YS0yNWI0LTQ0YWMtODFiNS1iOWIzYWNlNDA2NzMiLCJpYXQiOjE2MTUwMTk1MTUsImV4cCI6MTYxNTAxOTg3NX0.pF6MWHTEeHJMoWKUNc1JvOUD7dCNzkUQc1gEopBzkGA"
 }
 
 ###
@@ -29,10 +24,9 @@ POST http://localhost:5000/v1/user/login
 Content-Type: application/json
 
 {
-  "email" : "kaizen.tech404@gmail.com" ,
+  "email" : "kaizen.tdsaf4@gmail.com" ,
   "password" : "vistagram@123"
 }
-
 
 ###
 GET http://localhost:5000/v1/user

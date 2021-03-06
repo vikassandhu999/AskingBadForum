@@ -1,4 +1,5 @@
 import {BaseError} from "../../../../shared/core/BaseError";
+import {HttpErrors} from "../../../../shared/infra/http/errorCode";
 
 export type LoginUserDTO = {
     email : string;
@@ -12,12 +13,12 @@ export class LoginUserResponse {
 
 export class EmailOrPasswordDidNotMatch extends BaseError {
     constructor() {
-        super({error : "Email or Password didn't match"}, 403);
+        super("Email or Password didn't match", HttpErrors.UNAUTHENTICATED);
     }
 }
 
 export class EmailNotVerifiedError extends BaseError {
     constructor() {
-        super({email : "email is not verified"}, 403);
+        super("Email is not verified", HttpErrors.PERMISSION_DENIED , {email : "Email address is not verified"});
     }
 }
