@@ -2,8 +2,8 @@ POST http://localhost:5000/v1/user
 Content-Type: application/json
 
 {
-  "userName" : "kaizedsafn9784" ,
-  "email" : "kaizen.tdsaf4@gmail.com" ,
+  "userName" : "kai5555" ,
+  "email" : "kaizen2323t.tdsaf4@gmail.com" ,
   "fullName" : "Vikas Sandhu",
   "password" : "vistagram@123"
 }
@@ -16,7 +16,7 @@ POST http://localhost:5000/v1/user/email/verify
 Content-Type: application/json
 
 {
-  "verificationToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMzhiMDY3YS0yNWI0LTQ0YWMtODFiNS1iOWIzYWNlNDA2NzMiLCJpYXQiOjE2MTUwMTk1MTUsImV4cCI6MTYxNTAxOTg3NX0.pF6MWHTEeHJMoWKUNc1JvOUD7dCNzkUQc1gEopBzkGA"
+  "verificationToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTE5YTNmNi1mZDBjLTRhZTItYTIxMy1mZWI1MjY2OWNmYjAiLCJpYXQiOjE2MTUyMDM3MTQsImV4cCI6MTYxNTIwNDA3NH0.vnltIarwcJnVZObo8y723QqzzCLI6lwlHgQtfDcCnFo"
 }
 
 ###
@@ -24,8 +24,8 @@ POST http://localhost:5000/v1/user/login
 Content-Type: application/json
 
 {
-  "email" : "kaizen.tdsaf4@gmail.com" ,
-  "password" : "vistagram@123"
+  "email" : "kaizen2323t.tdsaewf@efmail.com" ,
+  "password" : "vistagram23@123"
 }
 
 ###

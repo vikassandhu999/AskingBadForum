@@ -1,21 +1,25 @@
 import {v4 as uuid} from "uuid";
-import {EmailNotVerifiedError, EmailOrPasswordDidNotMatch, LoginUserDTO, LoginUserResponse} from "./types";
-import validate from "validate.js";
-import {BaseError} from "../../../../shared/core/BaseError";
+import {
+    EmailNotVerifiedError,
+    EmailOrPasswordDidNotMatchError,
+    LoginUserDTO,
+    LoginUserResponse
+} from "./types";
 import {User} from "../../domain/User";
 import Password from "../../../../shared/packages/Password";
 import {IUserRepository} from "../../repositories/IUserRepository";
 import {JWT} from "../../../../shared/packages/jwt";
 import authConfig from "../../../../config/authConfig";
-import {HttpErrors} from "../../../../shared/infra/http/errorCode";
-import {InvalidParamsError} from "../../../../shared/core/InvalidParamsError";
+import { assert } from "../../../../shared/core/Assert";
+import {UseCase} from "../../../../shared/core/Usecase";
 
 type GetLoginTokensResponse = {accessToken : string , refreshToken : string};
 
-export class LoginUserUseCase {
+export class LoginUserUseCase extends UseCase<LoginUserDTO , LoginUserResponse>{
     private readonly userRepository: IUserRepository;
 
     constructor(userRepository: IUserRepository) {
+        super();
         this.userRepository = userRepository;
     }
 
@@ -37,34 +41,25 @@ export class LoginUserUseCase {
         return {accessToken , refreshToken};
     }
 
-    public async run(params: LoginUserDTO, context: any): Promise<LoginUserResponse> {
-        await this.validateInput(params);
+    protected async runImpl(params: LoginUserDTO, context: any): Promise<LoginUserResponse> {
         const {email, password} = params;
 
         const user: User | null = await this.userRepository.getByEmail(email);
 
-        if (!user) throw new EmailOrPasswordDidNotMatch();
+        assert(!!user , new EmailOrPasswordDidNotMatchError());
 
-        if(!user.isEmailVerified) throw new EmailNotVerifiedError();
+        assert(user.isEmailVerified , new EmailNotVerifiedError());
 
         const passwordMatched = await Password.compare(password, user.password);
 
-        if (!passwordMatched) throw new EmailOrPasswordDidNotMatch();
+        assert(passwordMatched , new EmailOrPasswordDidNotMatchError());
 
         const loginTokens = await this.getLoginTokens(user);
 
         return new LoginUserResponse(loginTokens.accessToken , loginTokens.refreshToken);
     }
 
-    private async validateInput(params: LoginUserDTO): Promise<void> {
-        const validation = validate(params, this.inputConstraints);
-        if (!validation) {
-            return;
-        }
-        throw new InvalidParamsError(validation);
-    }
-
-    private inputConstraints = {
+    protected inputConstraints = {
         email: {
             presence: true,
             email: true

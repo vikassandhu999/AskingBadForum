@@ -1,3 +1,3 @@
-export function FormatError(validation : any) {
+export function FormatError(validation: any) {
 
 }

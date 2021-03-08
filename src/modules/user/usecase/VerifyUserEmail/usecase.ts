@@ -1,40 +1,31 @@
 import {IUserRepository} from "../../repositories/IUserRepository";
 import {InvalidVerificationTokenError, VerifyUserEmailDTO, VerifyUserEmailResponse} from "./types";
-import {BaseError} from "../../../../shared/core/BaseError";
-import validate from "validate.js";
 import {JWT} from "../../../../shared/packages/jwt";
 import emailConfig from "../../../../config/emailConfig";
-import {InvalidParamsError} from "../../../../shared/core/InvalidParamsError";
+import { assert } from "../../../../shared/core/Assert";
+import {UseCase} from "../../../../shared/core/Usecase";
 
-export class VerifyUserEmailUseCase {
+export class VerifyUserEmailUseCase extends UseCase<VerifyUserEmailDTO, VerifyUserEmailResponse>{
     private readonly userRepository : IUserRepository;
 
     constructor(userRepository : IUserRepository) {
+        super();
         this.userRepository = userRepository;
     }
 
-    public async run(params: VerifyUserEmailDTO , context: any): Promise<VerifyUserEmailResponse> {
-        await this.validateInput(params);
+    protected async runImpl(params: VerifyUserEmailDTO , context: any): Promise<VerifyUserEmailResponse> {
         const { verificationToken } = params;
 
         const decoded = await JWT.verify(verificationToken , emailConfig.emailVerificationTokenSecret);
 
-        if(!decoded) throw new InvalidVerificationTokenError();
+        assert(!!decoded , new InvalidVerificationTokenError());
 
         await this.userRepository.setIsEmailVerified(decoded.userId , true);
 
         return new VerifyUserEmailResponse();
     }
 
-    private async validateInput(params: VerifyUserEmailDTO): Promise<void> {
-        const validation = validate(params, this.inputConstraints);
-        if (!validation) {
-            return;
-        }
-        throw new InvalidParamsError(validation);
-    }
-
-    private inputConstraints = {
+    protected inputConstraints = {
         verificationToken: {
             presence: true
         }

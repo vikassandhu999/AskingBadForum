@@ -1,17 +1,17 @@
 import he from "he";
 
 export class Utils {
-    public static sleep(ms : number) {
-            return new Promise((resolve) => {
-                setTimeout(resolve, ms);
-            });
+    public static sleep(ms: number) {
+        return new Promise((resolve) => {
+            setTimeout(resolve, ms);
+        });
     }
 
-    public static encodeHTML(dirtyHTML : string) : string {
+    public static encodeHTML(dirtyHTML: string): string {
         return he.encode(dirtyHTML);
     }
 
-    public static decodeHTML(html : string) : string {
+    public static decodeHTML(html: string): string {
         return he.decode(html);
     }
 

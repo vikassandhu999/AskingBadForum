@@ -1,29 +1,24 @@
-import {CreateUserDTO, CreateUserResponse, EmailAlreadyExistError, UsernameAlreadyTakenError} from "./types";
-import validate from "validate.js";
-import {BaseError} from "../../../../shared/core/BaseError";
-import {IUserRepository} from "../../repositories/IUserRepository";
-import {User} from "../../domain/User";
+import { CreateUserDTO, CreateUserResponse, EmailAlreadyExistError, UsernameAlreadyTakenError } from "./types";
+import { IUserRepository } from "../../repositories/IUserRepository";
+import { User } from "../../domain/User";
 import Password from "../../../../shared/packages/Password";
-import {SendVerificationEmailUseCase} from "../SendEmailVerification/usecase";
+import { SendVerificationEmailUseCase } from "../SendEmailVerification/usecase";
 import { assert } from "../../../../shared/core/Assert";
-import { MongooseUserRepository } from '../../repositories/imples/MongooseUserRepository';
-import {HttpErrors} from "../../../../shared/infra/http/errorCode";
-import {InvalidParamsError} from "../../../../shared/core/InvalidParamsError";
+import {UseCase} from "../../../../shared/core/Usecase";
 
-export class CreateUserUseCase {
+export class CreateUserUseCase extends UseCase<CreateUserDTO , CreateUserResponse>{
     private readonly userRepository: IUserRepository;
-    private readonly sendVerificationEmail : SendVerificationEmailUseCase;
+    private readonly sendVerificationEmail: SendVerificationEmailUseCase;
 
-    constructor(userRepository: IUserRepository,sendVerificationEmail : SendVerificationEmailUseCase) {
+    constructor(userRepository: IUserRepository, sendVerificationEmail: SendVerificationEmailUseCase) {
+        super();
         this.userRepository = userRepository;
         this.sendVerificationEmail = sendVerificationEmail;
     }
 
-    public async run(params: CreateUserDTO, context: any): Promise<CreateUserResponse> {
+    protected async runImpl(params: CreateUserDTO, context: any): Promise<CreateUserResponse> {
 
-        await this.validateInput(params);
-
-        const {email, userName, password} = params;
+        const { email, userName, password } = params;
 
         const emailExists = await this.userRepository.emailExists(email);
 
@@ -46,7 +41,7 @@ export class CreateUserUseCase {
         await this.userRepository.save(user);
 
         try {
-            await this.sendVerificationEmail.run({email : user.email} , {});
+            await this.sendVerificationEmail.run({ email: user.email }, {});
         } catch (e) {
             console.log(e);
         }
@@ -54,15 +49,7 @@ export class CreateUserUseCase {
         return new CreateUserResponse();
     }
 
-    private async validateInput(params: CreateUserDTO): Promise<void> {
-        const validation = validate(params, this.inputConstraints);
-        if (!validation) {
-            return;
-        }
-        throw new InvalidParamsError(validation);
-    }
-
-    private inputConstraints = {
+    protected inputConstraints = {
         userName: {
             presence: true,
             format: {
@@ -90,5 +77,4 @@ export class CreateUserUseCase {
             }
         }
     }
-
 }

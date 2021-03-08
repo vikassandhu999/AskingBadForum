@@ -11,7 +11,7 @@ export class LoginUserResponse {
     }
 }
 
-export class EmailOrPasswordDidNotMatch extends BaseError {
+export class EmailOrPasswordDidNotMatchError extends BaseError {
     constructor() {
         super("Email or Password didn't match", HttpErrors.UNAUTHENTICATED);
     }

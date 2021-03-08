@@ -1,8 +1,8 @@
-import {UnauthorizedAccessError} from "./UnathorizedAccessError";
+import { UnauthorizedAccessError } from "./UnathorizedAccessError";
 
 export interface AssertContextProps {
-    isAuthenticated?: boolean
-    authLevel?: number
+    isAuthenticated?: boolean;
+    authLevel?: number;
 }
 
 export function AssertContext(context: any, props: AssertContextProps) {

@@ -1,12 +1,12 @@
-import {BaseError} from "./BaseError";
+import { BaseError } from "./BaseError";
 
-export class Result<T = {},E = BaseError> {
+export class Result<T = {}, E = BaseError> {
 
     public getValue(): T {
         return this.value;
     }
 
-    public getError() : E {
+    public getError(): E {
         return this.err;
     }
 
@@ -14,7 +14,7 @@ export class Result<T = {},E = BaseError> {
     public readonly err: E;
     private readonly value: T;
 
-    private constructor(hasErrors: boolean, error?: E, value ?: T) {
+    private constructor(hasErrors: boolean, error?: E, value?: T) {
         if (!(!!value === hasErrors)) {
             throw new Error("[Result Class] : invalid argument passed");
         }

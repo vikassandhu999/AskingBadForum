@@ -1,7 +1,7 @@
 export class Context<T> implements IContext<T> {
     authLevel: number;
     isAuthenticated: boolean;
-    claims ?: T;
+    claims?: T;
 
     constructor(props: IContext<T>) {
         this.authLevel = props.authLevel ?? 0;

@@ -1,20 +1,18 @@
 import {Email, IEmailService} from "../../service/IEmailService";
 import {SendVerificationEmailDTO, SendVerificationEmailResponse, UserEmailDoesNotExistError} from "./types";
 import {IUserRepository} from "../../repositories/IUserRepository";
-import validate from "validate.js";
-import {BaseError} from "../../../../shared/core/BaseError";
 import emailConfig from "../../../../config/emailConfig";
 import {User} from "../../domain/User";
 import {JWT} from "../../../../shared/packages/jwt";
 import { assert } from "../../../../shared/core/Assert";
-import {HttpErrors} from "../../../../shared/infra/http/errorCode";
-import {InvalidParamsError} from "../../../../shared/core/InvalidParamsError";
+import {UseCase} from "../../../../shared/core/Usecase";
 
-export class SendVerificationEmailUseCase {
+export class SendVerificationEmailUseCase extends UseCase<SendVerificationEmailDTO , SendVerificationEmailResponse>{
     private readonly emailService : IEmailService;
     private readonly userRepository : IUserRepository;
 
     constructor(userRepository : IUserRepository ,emailService: IEmailService) {
+        super();
         this.emailService = emailService;
         this.userRepository = userRepository;
     }
@@ -39,12 +37,10 @@ export class SendVerificationEmailUseCase {
         }
     }
 
-    public async run(params: SendVerificationEmailDTO, context: any): Promise<SendVerificationEmailResponse> {
-        await this.validateInput(params);
-
+    protected async runImpl(params: SendVerificationEmailDTO, context: any): Promise<SendVerificationEmailResponse> {
         const userEmail = params.email;
 
-        const user : User | null = await this.userRepository.getByEmail(userEmail);
+        const user : User | null = await this.userRepository.getByEmail(userEmail)
 
         assert(!!user , new UserEmailDoesNotExistError());
 
@@ -62,15 +58,7 @@ export class SendVerificationEmailUseCase {
         return new SendVerificationEmailResponse();
     }
 
-    private async validateInput(params: SendVerificationEmailDTO): Promise<void> {
-        const validation = validate(params, this.inputConstraints);
-        if (!validation) {
-            return;
-        }
-        throw new InvalidParamsError(validation);
-    }
-
-    private inputConstraints = {
+    protected inputConstraints = {
         email: {
             presence: true,
             email: true
