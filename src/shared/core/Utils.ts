@@ -1,3 +1,4 @@
+import slugify from "slug";
 import he from "he";
 
 export class Utils {
@@ -15,4 +16,7 @@ export class Utils {
         return he.decode(html);
     }
 
+    public static slugify(txt: string): string {
+        return slugify(txt);
+    }
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import {BrowserRouter} from "react-router-dom";
 import { Switch, Router, Route } from "react-router";
-import { HomePage } from "../../../pages/home";
+import { HomePage } from "../../../../../dump/Y/home";
 import { HeaderComponent } from "../../components/header";
-import { Auth, AUTH_ROUTES } from "../../../pages/auth";
-import { POST_ROUTES, PostRouteComponent } from "../../../pages/post";
+import { Auth, AUTH_ROUTES } from "../../../../../dump/Y/auth";
+import { POST_ROUTES, PostRouteComponent } from "../../../../../dump/Y/post";
 
 
 const App = () => {

@@ -1,8 +1,8 @@
 import nodemailer from "nodemailer";
-import {NodeMailerEmailService} from "../../../src/modules/user/service/imples/NodeMailerEmailService";
+import {NodeMailerEmailService} from "../../../src/user/service/imples/NodeMailerEmailService";
 
 require("dotenv").config();
-import {Email} from "../../../src/modules/user/service/IEmailService";
+import {Email} from "../../../src/user/service/IEmailService";
 
 const fakeEmail : Email = {
     to : "kaizen.tech404@gmail.com",

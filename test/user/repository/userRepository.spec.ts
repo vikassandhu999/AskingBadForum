@@ -2,8 +2,8 @@ import {v4 as uuid} from "uuid";
 require("dotenv").config();
 
 import {mongooseConnection} from "../../../src/shared/infra/db/mongoose/connection";
-import {User} from "../../../src/modules/user/domain/User";
-import {userRepository} from "../../../src/modules/user/repositories";
+import {User} from "../../../src/user/domain/User";
+import {userRepository} from "../../../src/user/repositories";
 
 const userId = uuid();
 
