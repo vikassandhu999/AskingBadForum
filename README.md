@@ -1,6 +1,6 @@
-## AskingBadForum ( Clean Code Architecture and Tests )
+#### DogeAsk ( Clean Code Architecture and Tests )
 
-##### A Public web forum created with Node.js, Typescript and MongoDB. Clean Code practices and testable code
+##### A web platform for asking questions & organizing discussions.
 
 ### Table of contents
 * [Features](#features)
@@ -8,12 +8,14 @@
 * [Author](#author)
 
 ## Features
-* User Signup & Login
-* User Email Verification
-* Users can create own forum threads, reply to others', list daily interactions etc.
+* User signup & login
+* User email verification
+* Post questions & discussions
+* Interact (reply, upvote, downvote & share) with  questions & discussions
  
 ## Technologies
 * Node.js
+* React.js
 * MongoDB
 * Express
 * Typescript
